@@ -1,0 +1,48 @@
+// .section-heading{
+//     margin-top: 15vh;
+//     @include for-tablet-portrait-up{
+//         margin-top: 25vh;
+//     }
+//     @include for-desktop-up{
+//         margin-top: 35vh;
+//     }
+// }
+
+// .wrapper{
+//     max-width: 1400px;
+//     width: 100%;
+//     padding: var(--spacing-normal);
+
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+
+//     @include for-desktop-up{
+//         align-items: flex-start;
+//     }
+// }
+
+// .caption{
+//     text-decoration: none;
+//     color: $primary-white;
+// }
+
+.wrapper{
+    max-width: 1400px;
+    width: 100%;
+    padding: var(--spacing-normal);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include for-desktop-up{
+        align-items: flex-start;
+    }
+}
+.caption{
+    text-decoration: none;
+    color: $primary-white;
+}

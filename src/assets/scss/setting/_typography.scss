@@ -1,0 +1,120 @@
+@use './breakpoints' as *;
+@use './color' as *;
+
+*{
+    --font-small: 16px;
+    --font-normal: 22px;
+    --font-large: 15px;
+
+    --font-hero: 64px;
+}
+
+@include for-tablet-portrait-up{
+    *{
+        --font-small: 16px;
+        --font-normal: 24px;
+        --font-large: 30px;
+        
+        --font-hero: 144px;
+    }   
+}
+
+@include for-desktop-up{
+    *{
+        --font-small: 18px;
+        --font-normal: 24px;
+        --font-large: 32px;
+        
+        --font-hero: 144px;
+    }
+}
+
+.hero-text{
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: var(--font-hero);
+    line-height: 82%;
+    color: $primary-black;
+    &.dark-mode{
+        color: $primary-white;
+    }
+
+    text-transform: uppercase;
+}
+
+.hero-sub-text{
+    font-family: 'Nunito', sans-serif; 
+    font-style: normal;
+    font-weight: 300;
+    font-size: var(--font-large);
+    line-height: 82%;
+
+    color: $primary-black;
+    &.dark-mode{
+        color: $primary-white;
+    }
+    
+    letter-spacing: 1.01em;
+}
+
+.menu-item-text{
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: var(--font-normal);
+
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+}
+
+.bodyHeading{
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    
+    font-size: var(--font-normal);
+    line-height: calc(var(--font-normal) * 1.15); 
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: $primary-black;
+    &.dark-mode{
+        color: $primary-white;
+    }
+}
+
+.bodyText{
+    font-family: nunito;
+    &.alternate{
+        font-family: roboto;
+    }
+
+    font-style: normal;
+    font-weight: 200;
+    
+    font-size: var(--font-small);
+    line-height: calc(var(--font-small) * 1.15); 
+
+    letter-spacing: 0.12em;
+
+    color: $primary-black;
+    &.dark-mode{
+        color: $primary-white
+    }
+
+    max-width: 50ch;
+    &.align-center{
+        text-align: center;
+    }
+}
+
+.text-center{
+    text-align: center;
+}
+
+.large-margin-top{
+    margin-top: var(--spacing-large);
+}
