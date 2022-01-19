@@ -12,6 +12,7 @@
 
     <SectionGap class="dark-mode" />
     <ContactMeSection />
+    <!-- <SectionGap class="dark-mode" /> -->
 </div>
 </template>
 

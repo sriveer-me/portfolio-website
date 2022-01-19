@@ -11,7 +11,16 @@
             <div class="grid-two-way">
                 
                 <div class="left">
-                    
+                    <Icon size="75">
+                        <LinkedinIcon />
+                    </Icon>
+                    <Icon size="75">
+                        <DiscordIcon />
+                    </Icon>
+                    <FirefoxIcon width="75" height="75" />
+                    <Icon size="75">
+                        <GithubIcon />
+                    </Icon>
                 </div>
                 <div class="right">
                     <form name="contact" action="POST" data-netlify="true" class="contact-form">
@@ -71,11 +80,14 @@
 }
 
 .grid-two-way{
+    margin-top: 5vh;
+
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr auto;
+    grid-template-rows: 1fr;
     grid-template-areas: "icon" "form";
+    row-gap: var(--spacing-large);
 
     @include for-desktop-up{
         grid-template-columns: 1fr 2fr;
@@ -87,21 +99,38 @@
 
     .left{
         grid-area: icon;
-
+        
         display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-end;
+        flex-direction: row;
+        justify-content: space-around;
+
+        @include for-desktop-up{    
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+
+            min-height: 50vh;
+        }
+
+        svg{
+            color: $primary-white;
+            fill: $primary-white;
+
+            cursor: pointer;
+        }
     }
 
     .right{
         grid-area: form;
+        @include for-desktop-up{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 }
 
 .contact-form{
-    margin-top: 5vh;
-
     display: flex;
     flex-direction: column;
     row-gap: var(--spacing-large);
@@ -145,3 +174,22 @@
 }
 
 </style>
+
+<script>
+import { Icon } from '@vicons/utils';
+import LinkedinIcon from '@vicons/fa/Linkedin';
+import DiscordIcon from '@vicons/fa/Discord';
+import GithubIcon from '@vicons/fa/Github';
+import FirefoxIcon from '@/components/Icons/FirefoxIcon.vue';
+
+export default {
+    name: "Conatct-Me-Section",
+    components:{
+        Icon,
+        LinkedinIcon,
+        DiscordIcon,
+        GithubIcon,
+        FirefoxIcon
+    }
+}
+</script>
