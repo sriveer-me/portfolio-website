@@ -6,12 +6,12 @@
 
     <SectionGap  class="dark-mode"/>
     <PortfolioSection />
-    <!-- <SectionGap  class="dark-mode"/> -->
 
     <SectionGap />
     <HireMeSection />
-    <!-- <SectionGap /> -->
 
+    <SectionGap class="dark-mode" />
+    <ContactMeSection />
 </div>
 </template>
 
@@ -19,6 +19,7 @@
 import HomeSection from '@/sections/HomeSection.vue';
 import PortfolioSection from '@/sections/PortfolioSection.vue';
 import HireMeSection from '@/sections/HireMe.vue';
+import ContactMeSection from '@/sections/ContactMeSection.vue';
 
 import SectionGap from '@/sections/SectionGap.vue';
 
@@ -30,6 +31,8 @@ export default {
         HomeSection,
         PortfolioSection,
         HireMeSection,
+        ContactMeSection,
+
         Navbar,
 
         SectionGap
