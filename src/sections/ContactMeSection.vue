@@ -23,7 +23,7 @@
                     </Icon>
                 </div>
                 <div class="right">
-                    <form name="contact" action="POST" data-netlify="true" class="contact-form">
+                    <form name="contact" method="POST" data-netlify="true" class="contact-form">
                         <input type="hidden" name="form-name" value="contact">
 
                         <div class="form-element">
