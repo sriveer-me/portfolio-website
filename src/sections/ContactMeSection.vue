@@ -72,9 +72,16 @@
 
 .grid-two-way{
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "icon form";
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: "icon" "form";
+
+    @include for-desktop-up{
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "icon form";
+    }
 
     width: 100%;
 
