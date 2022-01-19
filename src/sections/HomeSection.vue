@@ -1,46 +1,46 @@
 <template>
     <section class="home-section">
-        <h2 class="hero-sub-text">Veeru Neerukonda</h2>
-        <h1 class="hero-text">Artist</h1>
-        <h1 class="hero-text">Designer</h1>
-        <h1 class="hero-text">Developer</h1>
+        <h2 class="hero-sub-text" id="home-subheading">Veeru Neerukonda</h2>
+        <h1 class="hero-text" id="home-heading-1">Artist</h1>
+        <h1 class="hero-text" id="home-heading-2">Designer</h1>
+        <h1 class="hero-text" id="home-heading-3">Developer</h1>
 
-        <svg class="divider-line" height="5" viewBox="0 0 90vw 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="divider-line" id="home-svg" height="5" viewBox="0 0 90vw 5" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="90vw" height="5" rx="2.5" fill="#2D56E6"/>
         </svg>
 
 
         <div class="icon-box">
             
-            <a class="box linkedIn-box" href="#">
-                <Icon size="75">
-                    <LinkedinIcon />
+            <a class="box linkedIn-box" id="home-linkedin-box" href="#">
+                <Icon size="75" >
+                    <LinkedinIcon id="home-linkedin"/>
                 </Icon>
                 <h1 class="menu-item-text" v-if="!isDesktop">Linked In</h1>
             </a>
 
-            <a class="box discord-box" href="#">
+            <a class="box discord-box" id="home-discord-box" href="#">
                 <Icon size="75">
-                    <DiscordIcon />
+                    <DiscordIcon id="home-discord"/>
                 </Icon>
                 <h1 class="menu-item-text" v-if="!isDesktop">Discord</h1>
             </a>
 
-            <a class="box leave-message-here-box" href="#">
-                <FirefoxIcon />
+            <a class="box leave-message-here-box" id="home-firefox-box" href="#">
+                <FirefoxIcon id="home-firefox"/>
                 <h1 class="menu-item-text" v-if="!isDesktop">Leave Message</h1>
             </a>
 
-            <a class="box github-box" href="#">
+            <a class="box github-box" id="home-github-box" href="#">
                 <Icon size="75">
-                    <GithubIcon />
+                    <GithubIcon id="home-github"/>
                 </Icon>
                 <h1 class="menu-item-text" v-if="!isDesktop">Github</h1>
             </a>
 
         </div>
 
-        <svg class="scroll-icon" v-if="isDesktop" 
+        <svg class="scroll-icon" v-if="isDesktop" id="scroll-icon"
              width="30px" height="37px" viewBox="0 0 30 37" version="1.1" xmlns="http://www.w3.org/2000/svg"
         >
             <g id="#252424fe">
@@ -54,6 +54,7 @@
 
 <script>
 import {isMobile,isTablet,isDesktop} from '@/js/breakpoints.js';
+import {playHomePageAnimationDesktop,playHomePageAnimationMobileTablet} from '@/js/Timelines/HomePage.js';
 
 import { Icon } from '@vicons/utils';
 import LinkedinIcon from '@vicons/fa/Linkedin';
@@ -111,6 +112,13 @@ export default {
         }.bind(this)
         resizeFunction();
         window.addEventListener("resize",resizeFunction)
+
+        setTimeout(function(){
+            if(this.isDesktop === true)
+                playHomePageAnimationDesktop();
+            else playHomePageAnimationMobileTablet();
+        }.bind(this),0)
+        
     }
 }
 </script>
