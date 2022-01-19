@@ -81,7 +81,7 @@
         </div>
 
         <div class="actions">
-            <a class="dashed-button menu-item-text" href="#">Download My Resume</a>
+            <a class="dashed-button menu-item-text" :href="require('@/assets/resume-veeru.pdf')" download="veeru-resume.pdf">Download My Resume</a>
             <a class="dashed-button menu-item-text" href="#">View More Projects</a>
         </div>
     </section>

@@ -73,7 +73,6 @@ img{
 
     text-decoration: none;
     color: $primary-white;
-    // background-color: $primary-black;
     background-color: map-get($accent,"light-mode");
 
     padding: var(--spacing-small) var(--spacing-normal);
