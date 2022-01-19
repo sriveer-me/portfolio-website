@@ -4,9 +4,12 @@
 *{
     --font-small: 16px;
     --font-normal: 22px;
-    --font-large: 15px;
+    --font-large: 18px;
 
     --font-hero: 64px;
+
+
+    --font-hero-sub-spacing: 0.7em;
 }
 
 @include for-tablet-portrait-up{
@@ -16,6 +19,8 @@
         --font-large: 30px;
         
         --font-hero: 144px;
+
+        --font-hero-sub-spacing: 1.01em;
     }   
 }
 
@@ -26,6 +31,8 @@
         --font-large: 32px;
         
         --font-hero: 144px;
+
+        --font-hero-sub-spacing: 1.01em;
     }
 }
 
@@ -55,7 +62,7 @@
         color: $primary-white;
     }
     
-    letter-spacing: 1.01em;
+    letter-spacing: var(--font-hero-sub-spacing);
 }
 
 .menu-item-text{

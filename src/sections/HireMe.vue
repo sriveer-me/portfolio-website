@@ -37,7 +37,7 @@
 
 .hire-me-section{
     background-color: $primary-white;
-    min-height: 100vh;
+    // min-height: 100vh;
 
     @include for-tablet-portrait-up{
         display: flex;
@@ -47,6 +47,8 @@
 } 
 
 .three-way-grid{
+    margin-top: var(--sapcing-large);
+
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;

@@ -6,7 +6,7 @@
                 <rect width="23.3333" height="15.1667" />
                 <rect x="11.6667" y="19.8333" width="23.3333" height="15.1667" />
             </svg>
-            <h1 class="menu-item-text">Veeru Empyrean</h1>
+            <h1 class="menu-item-text">Veeru Neerukonda</h1>
         </div>
 
         <div class="right">

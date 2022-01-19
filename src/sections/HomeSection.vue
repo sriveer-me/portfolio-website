@@ -1,6 +1,6 @@
 <template>
     <section class="home-section">
-        <h2 class="hero-sub-text">Sriveer Empyrean</h2>
+        <h2 class="hero-sub-text">Veeru Neerukonda</h2>
         <h1 class="hero-text">Artist</h1>
         <h1 class="hero-text">Designer</h1>
         <h1 class="hero-text">Developer</h1>
