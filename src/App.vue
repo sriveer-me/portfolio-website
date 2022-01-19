@@ -17,6 +17,8 @@
 </template>
 
 <script>
+import {genObserver} from '@/js/intersectionObserver.js';
+
 import HomeSection from '@/sections/HomeSection.vue';
 import PortfolioSection from '@/sections/PortfolioSection.vue';
 import HireMeSection from '@/sections/HireMe.vue';
@@ -39,7 +41,9 @@ export default {
         SectionGap
     },
     mounted(){
-        console.log('app started')
+        console.log('app started');
+
+        genObserver();
     }
 }
 </script>

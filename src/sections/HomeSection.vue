@@ -1,5 +1,5 @@
 <template>
-    <section class="home-section">
+    <section class="home-section" id="home-section">
         <h2 class="hero-sub-text" id="home-subheading">Veeru Neerukonda</h2>
         <h1 class="hero-text" id="home-heading-1">Artist</h1>
         <h1 class="hero-text" id="home-heading-2">Designer</h1>

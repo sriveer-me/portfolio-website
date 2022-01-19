@@ -1,5 +1,5 @@
 <template>
-    <section class="hire-me-section">
+    <section class="hire-me-section" id="hire-me-section">
         <div class="wrapper">
             <h1 class="hero-text section-heading">Hire Me!</h1>
             <h2 class="menu-item-text large-margin-top">My Specializations Dictate The Kind Of Work I Can Do An Exceptional Job In. </h2>

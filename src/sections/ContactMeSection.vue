@@ -1,5 +1,5 @@
 <template>
-    <section class="contact-me-section">
+    <section class="contact-me-section" id="contact-me-section">
         <div class="wrapper">
             <h1 class="hero-text dark-mode">Contact</h1>
             <h2 

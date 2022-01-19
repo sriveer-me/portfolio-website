@@ -1,5 +1,5 @@
 <template>
-    <section class="portfolio-section">
+    <section class="portfolio-section" id="portfolio-section">
         <div class="wrapper">
             <h1 class="hero-text dark-mode section-heading">Projects</h1>
             <h2 class="menu-item-text caption large-margin-top">Given Below Is A Detailed List Of My Most Important Projects Undertaken Yet.</h2>
