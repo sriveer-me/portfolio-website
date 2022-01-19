@@ -101,6 +101,9 @@
 
     font-style: normal;
     font-weight: 200;
+    &.strong{
+        font-weight: 400;
+    }
     
     font-size: var(--font-small);
     line-height: calc(var(--font-small) * 1.15); 
@@ -108,9 +111,16 @@
     letter-spacing: 0.12em;
 
     color: $primary-black;
-    &.dark-mode{
-        color: $primary-white
+    &.accent-color{
+        color: map-get($accent,"light-mode");
     }
+    &.dark-mode{
+        color: $primary-white;
+        &.accent-color{
+            color: map-get($accent,"dark-mode");
+        }
+    }
+    
 
     max-width: 50ch;
     &.align-center{

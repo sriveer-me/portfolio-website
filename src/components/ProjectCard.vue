@@ -2,17 +2,19 @@
     <div class="project-card">
         <h1 class="bodyHeading">{{title}}</h1>
         <img :src="image" :alt="imageAlt">
-        <slot name="projectDescription"/>
+        <div class="project-description">
+            <slot name="projectDescription"/>
+        </div>
         <div class="buttons">
-            <a :href="liveLink" class="button bodyText alternate">
-                <Icon>
-                    <BranchFork24Regular />
-                </Icon>
-                Live Version
-            </a>
-            <a :href="srcLink" class="button bodyText alternate">
+            <a :href="liveLink" class="button bodyText strong alternate">
                 <Icon>
                     <OpenOutline />
+                </Icon>
+                View Live
+            </a>
+            <a :href="srcLink" class="button bodyText strong alternate">
+                <Icon>
+                    <BranchFork24Regular />
                 </Icon>
                 Source
             </a>
@@ -54,6 +56,10 @@ img{
     width: 100%;
 }
 
+.project-description{
+    flex: 1 1 100%;
+}
+
 .buttons{
     display: flex;
     justify-content: space-between;
@@ -67,7 +73,9 @@ img{
 
     text-decoration: none;
     color: $primary-white;
-    background-color: $primary-black;
+    // background-color: $primary-black;
+    background-color: map-get($accent,"light-mode");
+
     padding: var(--spacing-small) var(--spacing-normal);
 
     border-radius: 2px;
