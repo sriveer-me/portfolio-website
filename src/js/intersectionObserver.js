@@ -1,11 +1,15 @@
-function main(events){
-    console.log(events)
+function main(events,observer){
+    events.forEach(function(event){
+        if(event.isIntersecting === true){
+            console.log(event.target)
+            observer.unobserve(event.target);
+        }
+    })
 }
 
 export function genObserver(){ 
     let observer = new IntersectionObserver(main,{
-        root: null,
-        threshold: 0.7,
+        root: null
     });
 
     let homeSection = document.getElementById('home-section');
