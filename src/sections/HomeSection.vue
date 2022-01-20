@@ -192,11 +192,18 @@ h2{
 
         background: $primary-white;
         svg{
+            transition: var(--global-transition) fill, 
+                        var(--global-transition) color;
             fill: $primary-black;
         }
+
+        &:hover{
+             svg{
+                fill: map-get($accent,"light-mode");
+                color: map-get($accent,"light-mode");
+            }
+        }
     }
-
-
     border-radius: 5px;
     text-decoration: none;
 }
