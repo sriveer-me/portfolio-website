@@ -13,14 +13,14 @@
                 
                 <div class="left" id="contact-icon-tray">
                     <Icon size="75">
-                        <LinkedinIcon id="contact-linkedin-icon"/>
+                        <LinkedinIcon class="contact-icon" id="contact-linkedin-icon"/>
                     </Icon>
                     <Icon size="75">
-                        <DiscordIcon id="contact-discord-icon" />
+                        <DiscordIcon class="contact-icon" id="contact-discord-icon" />
                     </Icon>
-                    <FirefoxIcon id="contact-firefox-icon"/>
+                    <FirefoxIcon class="contact-icon" id="contact-firefox-icon"/>
                     <Icon size="75">
-                        <GithubIcon id="contact-github-icon"/>
+                        <GithubIcon class="contact-icon" id="contact-github-icon"/>
                     </Icon>
                 </div>
                 <div class="right">
@@ -114,8 +114,16 @@
         }
 
         svg{
+            transition: var(--global-transition) fill, 
+                        var(--global-transition) color;
+
             color: $primary-white;
             fill: $primary-white;
+
+            &:hover{
+                color: map-get($accent,"dark-mode");
+                fill: map-get($accent,"dark-mode");
+            }
 
             cursor: pointer;
         }
