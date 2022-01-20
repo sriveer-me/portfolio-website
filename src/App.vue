@@ -18,6 +18,7 @@
 
 <script>
 import {main} from '@/js/Animations/HomePage.js';
+import {initHeadingObserver} from '@/js/Animations/headings.js';
 
 import HomeSection from '@/sections/HomeSection.vue';
 import PortfolioSection from '@/sections/PortfolioSection.vue';
@@ -44,6 +45,7 @@ export default {
         console.log('app started');
         setTimeout(function(){
             main();
+            initHeadingObserver();
         },0);
     }
 }
