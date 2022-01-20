@@ -64,6 +64,8 @@
 @use '@/assets/scss/setting' as *;
 
 .nav-bar{
+    transition: var(--global-transition) background-color;
+
     position: sticky;
     top: 0;
 
@@ -85,6 +87,10 @@
 }
 
 .icon-box{
+    transition: var(--global-transition) background-color,
+                var(--global-transition) color,
+                var(--global-transition) fill;
+
     height: 100%;
 
     display: flex;

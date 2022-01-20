@@ -57,7 +57,7 @@ export default {
                 if(event.isIntersecting === true){
                     if(event.target.id === "home-section"){
                         this.$refs.nav.selectButton("home");
-                        this.$refs.nav.toDarkMode();
+                        this.$refs.nav.toLightMode();
                     }
                     else if(event.target.id === "portfolio-section-complete"){
                         this.$refs.nav.selectButton("portfolio");
