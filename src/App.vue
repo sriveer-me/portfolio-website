@@ -17,7 +17,7 @@
 </template>
 
 <script>
-import {genObserver} from '@/js/intersectionObserver.js';
+import {main} from '@/js/Animations/HomePage.js';
 
 import HomeSection from '@/sections/HomeSection.vue';
 import PortfolioSection from '@/sections/PortfolioSection.vue';
@@ -42,8 +42,9 @@ export default {
     },
     mounted(){
         console.log('app started');
-
-        genObserver();
+        setTimeout(function(){
+            main();
+        },0);
     }
 }
 </script>

@@ -1,11 +1,12 @@
 <template>
     <section class="portfolio-section" id="portfolio-section">
         <div class="wrapper">
-            <h1 class="hero-text dark-mode section-heading">Projects</h1>
-            <h2 class="menu-item-text caption large-margin-top">Given Below Is A Detailed List Of My Most Important Projects Undertaken Yet.</h2>
+            <h1 class="hero-text dark-mode section-heading" id="portfolio-hero-heading">Projects</h1>
+            <h2 class="menu-item-text caption large-margin-top" id="portfolio-hero-sub-heading">Given Below Is A Detailed List Of My Most Important Projects Undertaken Yet.</h2>
     
             <div class="projects">
-                <ProjectCard 
+                <ProjectCard
+                    class="portfolio-project-card" id="portfolio-project-card-1"
                     style="grid-area: 'project-1'"
                     title="E-Commerce Platform"
                     image="https://via.placeholder.com/150"
@@ -18,6 +19,7 @@
                 </ProjectCard>
 
                 <ProjectCard 
+                    class="portfolio-project-card" id="portfolio-project-card-2"
                     style="grid-area: 'project-2'"
                     title="E-Commerce Platform"
                     image="https://via.placeholder.com/150"
@@ -29,7 +31,8 @@
                     </template>
                 </ProjectCard>
 
-                <ProjectCard 
+                <ProjectCard
+                    class="portfolio-project-card" id="portfolio-project-card-3"
                     style="grid-area: 'project-3'"
                     title="E-Commerce Platform"
                     image="https://via.placeholder.com/150"
@@ -41,7 +44,8 @@
                     </template>
                 </ProjectCard>
 
-                <ProjectCard 
+                <ProjectCard
+                    class="portfolio-project-card" id="portfolio-project-card-4"
                     style="grid-area: 'project-4'"
                     title="E-Commerce Platform"
                     image="https://via.placeholder.com/150"
@@ -53,7 +57,8 @@
                     </template>
                 </ProjectCard>
 
-                <ProjectCard 
+                <ProjectCard
+                    class="portfolio-project-card" id="portfolio-project-card-5"
                     style="grid-area: 'project-5'"
                     title="E-Commerce Platform"
                     image="https://via.placeholder.com/150"
@@ -65,7 +70,8 @@
                     </template>
                 </ProjectCard>
 
-                <ProjectCard 
+                <ProjectCard
+                    class="portfolio-project-card" id="portfolio-project-card-6"
                     style="grid-area: 'project-6'"
                     title="E-Commerce Platform"
                     image="https://via.placeholder.com/150"
