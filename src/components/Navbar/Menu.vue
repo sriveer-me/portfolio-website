@@ -70,6 +70,10 @@ ul{
 }
 
 .icon-box{
+    transition: var(--global-transition) background-color,
+                var(--global-transition) fill,
+                var(--global-transition) color;
+
     display: flex;
     align-items: center;
     justify-content: center;
