@@ -24,9 +24,9 @@
                 <h2 class="menu-item-text" v-show="isDesktop">Portfolio</h2>
             </div>
             <div class="icon-box" id="hire-nb" v-show="!isMobile">
-                <svg width="35" height="35" viewBox="0 0 35 35" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 17.5C0 12.8587 1.84374 8.40752 5.12563 5.12563C8.40752 1.84374 12.8587 0 17.5 0C22.1413 0 26.5925 1.84374 29.8744 5.12563C33.1563 8.40752 35 12.8587 35 17.5C35 22.1413 33.1563 26.5925 29.8744 29.8744C26.5925 33.1563 22.1413 35 17.5 35C12.8587 35 8.40752 33.1563 5.12563 29.8744C1.84374 26.5925 0 22.1413 0 17.5ZM17.5 2.1875C14.6164 2.18765 11.7914 3.00204 9.35026 4.53694C6.90908 6.07183 4.95093 8.26484 3.70117 10.8635C2.45141 13.4623 1.96085 16.3611 2.28593 19.2263C2.61102 22.0915 3.73855 24.8067 5.53875 27.0594C7.09188 24.5569 10.5109 21.875 17.5 21.875C24.4891 21.875 27.9059 24.5547 29.4613 27.0594C31.2614 24.8067 32.389 22.0915 32.7141 19.2263C33.0392 16.3611 32.5486 13.4623 31.2988 10.8635C30.0491 8.26484 28.0909 6.07183 25.6497 4.53694C23.2086 3.00204 20.3836 2.18765 17.5 2.1875Z" />
-                </svg>
+                <Icon size="35">
+                    <UserCircle />
+                </Icon>
                 <h2 class="menu-item-text" v-show="isDesktop">Hire Me</h2>
             </div>
             <div class="icon-box" id="contact-nb" v-show="!isMobile">
@@ -140,10 +140,15 @@
 import Menu from '@/components/Navbar/Menu.vue';
 import {isMobile,isTablet,isDesktop} from '@/js/breakpoints.js';
 
+import { Icon } from '@vicons/utils'
+import UserCircle from '@vicons/fa/UserCircle'
+
 export default {
     name: "NavBar",
     components:{
-        Menu
+        Menu,
+        Icon,
+        UserCircle
     },
     data(){
         return{
