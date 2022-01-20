@@ -54,7 +54,6 @@
 
 <script>
 import {isMobile,isTablet,isDesktop} from '@/js/breakpoints.js';
-import {playHomePageAnimationDesktop,playHomePageAnimationMobileTablet} from '@/js/Timelines/HomePage.js';
 
 import { Icon } from '@vicons/utils';
 import LinkedinIcon from '@vicons/fa/Linkedin';
@@ -112,13 +111,6 @@ export default {
         }.bind(this)
         resizeFunction();
         window.addEventListener("resize",resizeFunction)
-
-        setTimeout(function(){
-            if(this.isDesktop === true)
-                playHomePageAnimationDesktop();
-            else playHomePageAnimationMobileTablet();
-        }.bind(this),0)
-        
     }
 }
 </script>
