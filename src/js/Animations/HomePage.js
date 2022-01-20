@@ -170,6 +170,7 @@ function observerMain(events,observer){ //eslint-disable-line
                     })
                 }
                 else mobileTabletTimeline.play();
+                observer.unobserve(event.target);
             }
         } else{
             console.log("this target is not expexted to be observed by home section observer");
@@ -180,7 +181,6 @@ function observerMain(events,observer){ //eslint-disable-line
 
 let homeObserver = null;
 function initializeHomeObserver(){
-    console.log('hitting initialize home observer')
     if(homeObserver !== null)
         homeObserver.disconnect();
     
