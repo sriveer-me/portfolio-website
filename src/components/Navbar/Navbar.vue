@@ -242,7 +242,7 @@ export default {
             hamburgerMenu.classList.add('dark-mode');
         },
         toLightMode(){
-            let navBar = this.$el.querySelector('.nav-bar');
+            let navBar = this.$el //this is super dangerous and may break in the future easily
             navBar.classList.remove('dark-mode');
 
             let iconBoxes = this.$el.querySelectorAll('.icon-box');
@@ -261,9 +261,8 @@ export default {
         this.checkDevice();
         window.addEventListener("resize",this.checkDevice.bind(this));
 
-        this.selectButton('home');
-
-        this.toDarkMode();
+        // this.selectButton('home');
+        // this.toDarkMode();
     }
 }
 </script>

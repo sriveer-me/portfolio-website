@@ -17,7 +17,6 @@ let timelines = {};
 function observerMain(events,observer){ //eslint-disable-line
     events.forEach(function(event){
         if(event.isIntersecting === true){
-            console.log(event.target.id)
             timelines[`${event.target.id}`].play();
         }
         else{
