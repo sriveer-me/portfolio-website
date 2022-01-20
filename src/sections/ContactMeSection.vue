@@ -3,7 +3,7 @@
         <div class="wrapper">
             <h1 class="hero-text dark-mode" id="contact-me-heading">Contact</h1>
             <h2 
-                class="menu-item-text caption large-margin-top"
+                class="menu-item-text caption large-margin-top hero-sub-heading"
                 id ="contact-me-sub-heading"
             >
                 Please fill in the form and I will get in touch with you as soon as I am able to.

@@ -2,7 +2,7 @@
     <section class="hire-me-section" id="hire-me-section">
         <div class="wrapper">
             <h1 class="hero-text section-heading" id="hire-me-heading">Hire Me!</h1>
-            <h2 class="menu-item-text large-margin-top" id="hire-me-sub-heading">My Specializations Dictate The Kind Of Work I Can Do An Exceptional Job In. </h2>
+            <h2 class="menu-item-text large-margin-top hero-sub-heading" id="hire-me-sub-heading">My Specializations Dictate The Kind Of Work I Can Do An Exceptional Job In. </h2>
         </div>
         
         <div class="three-way-grid">

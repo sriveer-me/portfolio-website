@@ -2,7 +2,7 @@
     <section class="portfolio-section" id="portfolio-section">
         <div class="wrapper">
             <h1 class="hero-text dark-mode section-heading" id="portfolio-hero-heading">Projects</h1>
-            <h2 class="menu-item-text caption large-margin-top" id="portfolio-hero-sub-heading">Given Below Is A Detailed List Of My Most Important Projects Undertaken Yet.</h2>
+            <h2 class="menu-item-text caption large-margin-top hero-sub-heading" id="portfolio-hero-sub-heading">Given Below Is A Detailed List Of My Most Important Projects Undertaken Yet.</h2>
     
             <div class="projects">
                 <ProjectCard
