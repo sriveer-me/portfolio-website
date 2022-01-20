@@ -17,8 +17,7 @@
 </template>
 
 <script>
-import {main} from '@/js/Animations/HomePage.js';
-import {initHeadingObserver} from '@/js/Animations/headings.js';
+import {generateAnimation} from '@/js/Animations/main.js';
 
 import HomeSection from '@/sections/HomeSection.vue';
 import PortfolioSection from '@/sections/PortfolioSection.vue';
@@ -44,8 +43,7 @@ export default {
     mounted(){
         console.log('app started');
         setTimeout(function(){
-            main();
-            initHeadingObserver();
+            generateAnimation();
         },0);
     }
 }

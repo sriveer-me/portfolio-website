@@ -11,16 +11,16 @@
 
             <div class="grid-two-way">
                 
-                <div class="left">
+                <div class="left" id="contact-icon-tray">
                     <Icon size="75">
-                        <LinkedinIcon />
+                        <LinkedinIcon id="contact-linkedin-icon"/>
                     </Icon>
                     <Icon size="75">
-                        <DiscordIcon />
+                        <DiscordIcon id="contact-discord-icon" />
                     </Icon>
-                    <FirefoxIcon width="75" height="75" />
+                    <FirefoxIcon id="contact-firefox-icon"/>
                     <Icon size="75">
-                        <GithubIcon />
+                        <GithubIcon id="contact-github-icon"/>
                     </Icon>
                 </div>
                 <div class="right">
