@@ -285,9 +285,6 @@ export default {
     mounted(){
         this.checkDevice();
         window.addEventListener("resize",this.checkDevice.bind(this));
-
-        // this.selectButton('home');
-        // this.toDarkMode();
     }
 }
 </script>
