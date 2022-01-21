@@ -73,7 +73,7 @@
                     <Cloud />
                 </Icon>
                 <p class="bodyText align-center">
-                    <strong>I am an aspiring <strong>Cloud Engineer</strong> and am working hard round the clock to ingratiate myself into the ethos of said community.</strong> 
+                    <strong>I am an aspiring <strong>Cloud Engineer</strong> and am working hard to ingratiate into the ethos of said community.</strong> 
                 </p>
                 <ul class="skill-description-list">
                     <li>
@@ -83,7 +83,7 @@
                     </li>
                     <li>
                         <p class="bodyText align-center">
-                            The <strong>Heroku</strong> platform has personally been my platform of choice for the past few years as is evidenced by the fact that a multiplicity of my projects are hosted on this platform.    
+                            <strong>Heroku</strong> has personally been my platform of choice for the past few years as is evidenced by the fact that a multiplicity of my projects are hosted here on the said platform.    
                         </p>
                     </li>
                 </ul>
