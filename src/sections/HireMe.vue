@@ -10,7 +10,27 @@
                 <Icon class="icon" :size="iconSize">
                     <GameController />
                 </Icon>
-                <p class="bodyText align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, saepe similique. Velit necessitatibus incidunt, beatae nam modi, quisquam quidem non quam quibusdam architecto, itaque et.</p>
+                <p class="bodyText align-center">
+                    <strong>Passion towards video games from an early age drove me to master the c++ programming language.</strong> 
+                </p>
+                <ul style="list-style: square;">
+                    <li>
+                        <p class="bodyText align-center">
+                            The Android app store game <strong>Air Shooter DX</strong> was written and published by a small core team which was headed by me.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="bodyText align-center">
+                            I find the <strong>archietecture</strong> of video game engines quite fascinating and as such have dedicated to learn the intricacies and esoteric knowledge of atleast one video game game engine namely <strong>Godot.</strong>
+                        </p>
+                    </li>
+                </ul>
+                <div class="sticker-box">
+                    <GodotIcon class="icon" />
+                    <Icon class="icon" :size="64">
+                        <Android />
+                    </Icon>
+                </div>
             </div>
             <div class="center grid-cell">
                 <Icon class="icon" :size="iconSize">
@@ -96,13 +116,27 @@
 .icon{
     color: $primary-black;
 }
+
+.sticker-box{
+    width: 50%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    svg{
+        width: 64px;
+        height: 64px;
+    }
+}
 </style>
 
 <script>
 import { Icon } from '@vicons/utils'
-import  DrawOutlined  from '@vicons/material/DrawOutlined';
-import  GameController  from '@vicons/ionicons5/GameController';
-import  WebFilled  from '@vicons/material/WebFilled';
+import DrawOutlined  from '@vicons/material/DrawOutlined';
+import GameController  from '@vicons/ionicons5/GameController';
+import WebFilled  from '@vicons/material/WebFilled';
+import GodotIcon from '@/components/Icons/GodotIcon.vue';
+import Android from '@vicons/ionicons4/LogoAndroid';
 
 import {isMobile, isTablet, isDesktop} from '@/js/breakpoints.js';
 
@@ -112,7 +146,9 @@ export default {
         Icon,
         DrawOutlined,
         GameController,
-        WebFilled
+        WebFilled,
+        GodotIcon,
+        Android
     },
     data(){
         return{
