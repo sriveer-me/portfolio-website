@@ -8,13 +8,43 @@
                 <ProjectCard
                     class="portfolio-project-card" id="portfolio-project-card-1"
                     style="grid-area: 'project-1'"
-                    title="E-Commerce Platform"
-                    image="https://via.placeholder.com/150"
-                    imageAlt="the placeholder image"
+                    title="Blog Website"
+                    :image="require('@/assets/images/vn-blog.png')"
+                    imageAlt="Website Image"
                     liveLink="#" srcLink="#"
                 >
                     <template #projectDescription>
-                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                        <p class="bodyText">
+                            This fully responsive website written using <a class="link" href="https://v3.vuejs.org/">Vue3</a> packs a pretty punch with its impressive features like.                               
+                        </p>
+                        <ul class="project-description-list">
+                            <li>
+                                <p class="bodyText">
+                                    Fully featured searching with the capability to <a class="link" href="https://fusejs.io/">Fuzzy Search</a> and result filter using <strong>Custom Tags</strong> easily declarable by a non programmer in a seperate json file.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The integration of a component library in the form of <a class="link" href="https://www.naiveui.com/en-US/os-theme">Naive UI</a> allows me to quickly and correctly implement complex Ui elements which otherwise would have taken far too long to write anf test for an acceptable production level performance.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    <a class="link" href="https://router.vuejs.org/">Vue router</a> coupled with <a class="link" href="https://v3.vuejs.org/guide/transitions-enterleave.html#transitioning-single-elements-components">transitions using Vue3</a> allows for seamless transition between different pages of the blog all the while retaining the feel of a single page application.
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="sticker-box">
+                            <Icon size="64">
+                                <LogoVue />
+                            </Icon>
+                            <Icon size="64">
+                                <Json />
+                            </Icon>
+                            <Icon size="64">
+                                <Js />
+                            </Icon>
+                        </div>
                     </template>
                 </ProjectCard>
 
@@ -175,15 +205,44 @@
         text-decoration: none;
     }
 }
+
+.link{
+    text-decoration: none;
+    color: map-get($accent,"light-mode");
+    font-weight: 400;
+}
+
+.project-description-list{
+    list-style:square;
+    li{
+        margin-top: var(--spacing-normal);
+    }
+}
+
+.sticker-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
 </style>
 
 <script>
 import ProjectCard from '@/components/ProjectCard.vue';
 
+import { Icon } from '@vicons/utils'
+import LogoVue from '@vicons/ionicons5/LogoVue'
+import Json from '@vicons/carbon/Json'
+import Js from '@vicons/fa/Js';
+
+
 export default {
     name: "Portfolio Section",
     components:{
-        ProjectCard
+        ProjectCard,
+        Icon,
+        LogoVue,
+        Json,
+        Js
     }
 }
 </script>
