@@ -13,7 +13,7 @@
                 <p class="bodyText align-center">
                     <strong>Passion towards video games from an early age drove me to master the c++ programming language.</strong> 
                 </p>
-                <ul style="list-style: square;">
+                <ul class="skill-description-list">
                     <li>
                         <p class="bodyText align-center">
                             The Android app store game <strong>Air Shooter DX</strong> was written and published by a small core team which was headed by me.
@@ -37,12 +37,12 @@
                     <WebFilled />
                 </Icon>
                 <p class="bodyText align-center">
-                    <strong>I am a proficient and seasoned <strong>Application Developer</strong> and am adept in using a variety of toolkits and frameworks to achieve me ends.</strong> 
+                    <strong>I am a proficient and seasoned <strong>Application Developer</strong> and am adept in using a variety of toolkits and frameworks to achieve my ends.</strong> 
                 </p>
-                <ul style="list-style: square;">
+                <ul class="skill-description-list">
                     <li>
                         <p class="bodyText align-center">
-                            This very website was written entirely by me in the Vue3 framework and is being hosted on a serverless backend cloud service.
+                            This very website was written entirely by me in the <strong>Vue3</strong> framework and is being hosted on a serverless backend cloud service.
                         </p>
                     </li>
                     <li>
@@ -70,9 +70,29 @@
             </div>
             <div class="right grid-cell">
                 <Icon class="icon" :size="iconSize">
-                    <DrawOutlined />
+                    <Cloud />
                 </Icon>
-                <p class="bodyText align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, saepe similique. Velit necessitatibus incidunt, beatae nam modi, quisquam quidem non quam quibusdam architecto, itaque et.</p>
+                <p class="bodyText align-center">
+                    <strong>I am an aspiring <strong>Cloud Engineer</strong> and am working hard round the clock to ingratiate myself into the ethos of said community.</strong> 
+                </p>
+                <ul class="skill-description-list">
+                    <li>
+                        <p class="bodyText align-center">
+                            Preparing for the <strong>Amaozn Certified Cloud Practioner(CLF-C01)</strong> exam is broadening my understanding of the cloud and its role in the world. 
+                        </p>
+                    </li>
+                    <li>
+                        <p class="bodyText align-center">
+                            The <strong>Heroku</strong> platform has personally been my platform of choice for the past few years as is evidenced by the fact that a multiplicity of my projects are hosted on this platform.    
+                        </p>
+                    </li>
+                </ul>
+                <div class="sticker-box full-width">
+                    <Icon class="icon" :size="64">
+                        <Aws />
+                    </Icon>
+                    <HerokuIcon />
+                </div>
             </div>
         </div>
 
@@ -86,6 +106,7 @@
 .hire-me-section{
     background-color: $primary-white;
     padding-bottom: var(--spacing-large);
+    max-width: 1920px; //this is because the section looked ugly in a 4k monitor.. In future though I must seriously think about bumping up font sizes in gneral for a higher resolution
 
     @include for-tablet-portrait-up{
         display: flex;
@@ -159,11 +180,23 @@
         height: 64px;
     }
 }
+
+.skill-description-list{
+    list-style: none;
+    padding-left: 0;
+    @include for-desktop-up{
+        list-style: square;
+        padding-left: unset; //initial probably would have been fine as well
+    }
+
+    li{
+        margin-top: var(--spacing-normal)
+    }
+}
 </style>
 
 <script>
 import { Icon } from '@vicons/utils'
-import DrawOutlined  from '@vicons/material/DrawOutlined';
 import GameController  from '@vicons/ionicons5/GameController';
 import WebFilled  from '@vicons/material/WebFilled';
 import GodotIcon from '@/components/Icons/GodotIcon.vue';
@@ -173,6 +206,10 @@ import LogoJavascript  from '@vicons/ionicons5/LogoJavascript';
 import Api from '@vicons/carbon/Api';
 import LogoVue from '@vicons/ionicons5/LogoVue';
 
+import Cloud  from '@vicons/fa/Cloud';
+import Aws  from '@vicons/fa/Aws';
+import HerokuIcon from '@/components/Icons/HerokuIcon.vue';
+
 
 import {isMobile, isTablet, isDesktop} from '@/js/breakpoints.js';
 
@@ -180,14 +217,17 @@ export default {
     name: "HireMe Section",
     components:{
         Icon,
-        DrawOutlined,
         GameController,
         WebFilled,
         GodotIcon,
         Android,
         LogoJavascript,
         LogoVue,
-        Api
+        Api,
+
+        Cloud,
+        Aws,
+        HerokuIcon
     },
     data(){
         return{
