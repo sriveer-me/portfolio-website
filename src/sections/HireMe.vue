@@ -36,9 +36,37 @@
                 <Icon class="icon" :size="iconSize">
                     <WebFilled />
                 </Icon>
-                <p class="bodyText align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, saepe similique. Velit necessitatibus incidunt, beatae nam modi, quisquam quidem non quam quibusdam architecto, itaque et.</p>
-
-                <p class="bodyText align-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut minima dolorem esse accusamus suscipit aliquid omnis laboriosam id, non, sequi dicta? Perspiciatis consequatur id aliquid sit vero repellendus itaque eum inventore. Recusandae corrupti non ad, consequatur temporibus quisquam tenetur accusantium cum incidunt quidem, itaque iste dolor, voluptas iusto harum totam illum! Voluptatem accusantium temporibus minima, cupiditate perspiciatis sapiente sint laborum?</p>
+                <p class="bodyText align-center">
+                    <strong>I am a proficient and seasoned <strong>Application Developer</strong> and am adept in using a variety of toolkits and frameworks to achieve me ends.</strong> 
+                </p>
+                <ul style="list-style: square;">
+                    <li>
+                        <p class="bodyText align-center">
+                            This very website was written entirely by me in the Vue3 framework and is being hosted on a serverless backend cloud service.
+                        </p>
+                    </li>
+                    <li>
+                        <p class="bodyText align-center">
+                            Being very adept in the ways of the <strong>Rest Api</strong> means I can divide and conquer (or defeat in detail) any problem regarding a full stack application.      
+                        </p>
+                    </li>
+                    <li>
+                        <p class="bodyText align-center">
+                            I take great pain to learn esoteric (slightly less useful) <strong>javascript</strong> as I plan on maintaining a diverse range of tools and solutions for any problem at hand.
+                        </p>
+                    </li>
+                </ul>
+                <div class="sticker-box full-width">
+                    <Icon class="icon" :size="64">
+                        <LogoVue />
+                    </Icon>
+                    <Icon class="icon" :size="64">
+                        <Api />
+                    </Icon>
+                    <Icon class="icon" :size="64">
+                        <LogoJavascript />
+                    </Icon>
+                </div>
             </div>
             <div class="right grid-cell">
                 <Icon class="icon" :size="iconSize">
@@ -57,7 +85,7 @@
 
 .hire-me-section{
     background-color: $primary-white;
-    // min-height: 100vh;
+    padding-bottom: var(--spacing-large);
 
     @include for-tablet-portrait-up{
         display: flex;
@@ -119,6 +147,9 @@
 
 .sticker-box{
     width: 50%;
+    &.full-width{
+        width: 100%;
+    }
 
     display: flex;
     flex-direction: row;
@@ -138,6 +169,11 @@ import WebFilled  from '@vicons/material/WebFilled';
 import GodotIcon from '@/components/Icons/GodotIcon.vue';
 import Android from '@vicons/ionicons4/LogoAndroid';
 
+import LogoJavascript  from '@vicons/ionicons5/LogoJavascript';
+import Api from '@vicons/carbon/Api';
+import LogoVue from '@vicons/ionicons5/LogoVue';
+
+
 import {isMobile, isTablet, isDesktop} from '@/js/breakpoints.js';
 
 export default {
@@ -148,7 +184,10 @@ export default {
         GameController,
         WebFilled,
         GodotIcon,
-        Android
+        Android,
+        LogoJavascript,
+        LogoVue,
+        Api
     },
     data(){
         return{
