@@ -30,6 +30,7 @@ ol[role='list'] {
 /* Set core root defaults */
 html:focus-within {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 /* Set core body defaults */
