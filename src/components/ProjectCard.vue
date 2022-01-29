@@ -1,7 +1,10 @@
 <template>
     <div class="project-card">
         <h1 class="bodyHeading">{{title}}</h1>
-        <img :src="image" :alt="imageAlt">
+         <n-image
+            :alt="imageAlt"
+            :src="image"
+        />
         <div class="project-description">
             <slot name="projectDescription"/>
         </div>
@@ -88,12 +91,16 @@ import { Icon } from '@vicons/utils'
 import  BranchFork24Regular  from '@vicons/fluent/BranchFork24Regular';
 import  OpenOutline  from '@vicons/ionicons5/OpenOutline';
 
+import {NImage} from 'naive-ui';
+
 export default {
     name: "Project Card",
     components:{
         Icon,
         BranchFork24Regular,
-        OpenOutline
+        OpenOutline,
+
+        NImage
     },
     props:{
         title:{
