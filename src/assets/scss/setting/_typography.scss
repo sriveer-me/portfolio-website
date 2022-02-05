@@ -66,9 +66,18 @@
 }
 
 .menu-item-text{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Nunito', sans-serif;
     font-style: normal;
-    font-weight: 300;
+    font-weight: 350;
+    font-size: var(--font-normal);
+
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+}
+.sub-heading{
+    font-family: 'Nunito', sans-serif;
+    font-style: normal;
+    font-weight: 200;
     font-size: var(--font-normal);
 
     letter-spacing: 0.1em;
@@ -76,7 +85,7 @@
 }
 
 .bodyHeading{
-    font-family: Roboto;
+    font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
     
@@ -94,21 +103,21 @@
 }
 
 .bodyText{
-    font-family: nunito;
-    &.alternate{
-        font-family: roboto;
-    }
-
+    font-family: Nunito;
+    
     font-style: normal;
-    font-weight: 200;
+    font-weight: 250;
     &.strong{
+        font-weight: 450;
+    }
+    strong{
         font-weight: 400;
     }
     
     font-size: var(--font-small);
     line-height: calc(var(--font-small) * 1.15); 
 
-    letter-spacing: 0.12em;
+    letter-spacing: 0.1rem;
 
     color: $primary-black;
     &.accent-color{
@@ -120,7 +129,6 @@
             color: map-get($accent,"dark-mode");
         }
     }
-    
 
     max-width: 50ch;
     &.align-center{

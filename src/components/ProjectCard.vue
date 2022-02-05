@@ -82,7 +82,7 @@ img{
 
     padding: var(--spacing-small) var(--spacing-normal);
 
-    border-radius: 2px;
+    border-radius: 5px;
 }
 </style>
 
