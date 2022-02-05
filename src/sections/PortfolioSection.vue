@@ -15,7 +15,7 @@
                 >
                     <template #projectDescription>
                         <p class="bodyText strong">
-                            This fully responsive website written using <a class="link" href="https://v3.vuejs.org/">Vue3</a> packs a pretty punch with its impressive features like.                               
+                            This fully responsive website written using <a class="link" href="https://v3.vuejs.org/">Vue3</a> packs a pretty punch with its impressive features like:                            
                         </p>
                         <ul class="project-description-list">
                             <li>
@@ -35,13 +35,13 @@
                             </li>
                         </ul>
                         <div class="sticker-box">
-                            <Icon size="64">
+                            <Icon size="64" color="#262525">
                                 <LogoVue />
                             </Icon>
-                            <Icon size="64">
+                            <Icon size="64" color="#262525">
                                 <Json />
                             </Icon>
-                            <Icon size="64">
+                            <Icon size="64" color="#262525">
                                 <Js />
                             </Icon>
                         </div>
@@ -148,7 +148,7 @@
     display: grid;
     gap: var(--spacing-large);
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat(6,auto);
     grid-template-areas: 
         "project-1",
         "project-2",
@@ -159,7 +159,7 @@
 
     @include for-tablet-portrait-up{
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-rows: repeat(3,auto);
         grid-template-areas: 
             "project-1 project-2",
             "project-3 project-4",
@@ -168,7 +168,7 @@
 
     @include for-desktop-up{
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: repeat(2,auto);
         grid-template-areas: 
             "project-1 project-2 project-3",
             "project-4 project-5 project-6";
