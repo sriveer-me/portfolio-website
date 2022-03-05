@@ -48,16 +48,46 @@
                     </template>
                 </ProjectCard>
 
-                <ProjectCard 
-                    class="portfolio-project-card" id="portfolio-project-card-2"
-                    style="grid-area: 'project-2'"
-                    title="E-Commerce Platform"
-                    image="https://via.placeholder.com/150"
-                    imageAlt="the placeholder image"
-                    liveLink="#" srcLink="#"
+                <ProjectCard
+                    class="portfolio-project-card" id="portfolio-project-card-1"
+                    style="grid-area: 'project-1'"
+                    title="Blog Website"
+                    :image="require('@/assets/images/quiz-app.png')"
+                    imageAlt="Website Image"
+                    liveLink="https://quiz-app-veeru.netlify.app/" srcLink="https://github.com/veeru-neerukonda/quiz-app-game"
                 >
                     <template #projectDescription>
-                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                        <p class="bodyText strong">
+                            This Application being a Full Stack application takes advantages of the fact that Back-End can be safely deployed on <a class="link" href="https://www.heroku.com/platform">Heroku</a> while a blazing fast Client facing Static Front-End Website is best served by <a class="link" href="https://www.netlify.com/">Netlify.</a>
+                        </p>
+                        <ul class="project-description-list">
+                            <li>
+                                <p class="bodyText">
+                                    Fully featured searching with the capability to <a class="link" href="https://fusejs.io/">Fuzzy Search</a> and result filter using <strong>Custom Tags</strong> easily declarable by a non programmer in a seperate json file.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The integration of a component library in the form of <a class="link" href="https://www.naiveui.com/en-US/os-theme">Naive UI</a> allows me to quickly and correctly implement complex Ui elements which otherwise would have taken far too long to write anf test for an acceptable production level performance.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    <a class="link" href="https://router.vuejs.org/">Vue router</a> coupled with <a class="link" href="https://v3.vuejs.org/guide/transitions-enterleave.html#transitioning-single-elements-components">transitions using Vue3</a> allows for seamless transition between different pages of the blog all the while retaining the feel of a single page application.
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="sticker-box">
+                            <Icon size="64" color="#262525">
+                                <LogoVue />
+                            </Icon>
+                            <Icon size="64" color="#262525">
+                                <Json />
+                            </Icon>
+                            <Icon size="64" color="#262525">
+                                <Js />
+                            </Icon>
+                        </div>
                     </template>
                 </ProjectCard>
 
