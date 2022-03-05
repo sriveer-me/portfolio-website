@@ -1,6 +1,6 @@
 export function generateNavObserver(observerMain){
     let observer = new IntersectionObserver(observerMain,{
-        rootMargin: "-40% 0px"
+        rootMargin: "-30% 0px"
     });
 
     let homeSection = document.getElementById('home-section');

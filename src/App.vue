@@ -56,22 +56,18 @@ export default {
             events.forEach(function(event){
                 if(event.isIntersecting === true){
                     if(event.target.id === "home-section"){
-                        console.log('is intersecting home-section');
                         this.$refs.nav.selectButton("home");
                         this.$refs.nav.toLightMode();
                     }
                     else if(event.target.id === "portfolio-section"){
-                        console.log('is intersecting portfolio-section');
                         this.$refs.nav.selectButton("portfolio");
                         this.$refs.nav.toDarkMode();
                     }
                     else if(event.target.id === "hire-me-section"){
-                        console.log('is intersecting hire-me-section');
                         this.$refs.nav.selectButton("hire");
                         this.$refs.nav.toLightMode();
                     }
                     else if(event.target.id === "contact-me-section"){
-                        console.log('is intersecting contact-section');
                         this.$refs.nav.selectButton("contact");
                         this.$refs.nav.toDarkMode();
                     }
