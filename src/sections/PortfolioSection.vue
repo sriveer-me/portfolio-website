@@ -51,42 +51,43 @@
                 <ProjectCard
                     class="portfolio-project-card" id="portfolio-project-card-1"
                     style="grid-area: 'project-1'"
-                    title="Blog Website"
+                    title="Quiz App"
                     :image="require('@/assets/images/quiz-app.png')"
-                    imageAlt="Website Image"
+                    imageAlt="Quiz App Image"
                     liveLink="https://quiz-app-veeru.netlify.app/" srcLink="https://github.com/veeru-neerukonda/quiz-app-game"
                 >
                     <template #projectDescription>
                         <p class="bodyText strong">
-                            This Application being a Full Stack application takes advantages of the fact that Back-End can be safely deployed on <a class="link" href="https://www.heroku.com/platform">Heroku</a> while a blazing fast Client facing Static Front-End Website is best served by <a class="link" href="https://www.netlify.com/">Netlify.</a>
+                            This fullstack web game uses both <a class="link" href="https://www.heroku.com/platform">Heroku</a> and <a class="link" href="https://www.netlify.com/">Netlify</a> together to provide blazing fast client load times as well as secure access to a transactional database.
                         </p>
                         <ul class="project-description-list">
                             <li>
                                 <p class="bodyText">
-                                    Fully featured searching with the capability to <a class="link" href="https://fusejs.io/">Fuzzy Search</a> and result filter using <strong>Custom Tags</strong> easily declarable by a non programmer in a seperate json file.
+                                    A <a class="link" href="https://en.wikipedia.org/wiki/Static_web_page">Static Page</a> is served to the client with exceptional speed using the <a href="https://azure.microsoft.com/en-in/overview/what-is-paas/" class="link">Platform As A Service (PAAS)</a> provider <a class="link" href="https://www.netlify.com/">Netlify</a>. 
                                 </p>
                             </li>
                             <li>
                                 <p class="bodyText">
-                                    The integration of a component library in the form of <a class="link" href="https://www.naiveui.com/en-US/os-theme">Naive UI</a> allows me to quickly and correctly implement complex Ui elements which otherwise would have taken far too long to write anf test for an acceptable production level performance.
+                                    This <a class="link" href="https://en.wikipedia.org/wiki/Static_web_page">Static Page</a> is invested with the responsibility to conduct and proctor the game. Client computation resources are utilized as much as possible so as to keep operation costs of the server low.
                                 </p>
                             </li>
                             <li>
                                 <p class="bodyText">
-                                    <a class="link" href="https://router.vuejs.org/">Vue router</a> coupled with <a class="link" href="https://v3.vuejs.org/guide/transitions-enterleave.html#transitioning-single-elements-components">transitions using Vue3</a> allows for seamless transition between different pages of the blog all the while retaining the feel of a single page application.
+                                    The server hosted on the platform <a class="link" href="https://www.heroku.com/platform">Heroku</a> is responsible for storing and maintaining player records using a <a href="https://www.mongodb.com/databases/types/transactional-databases" class="link">Transactional Database</a> .
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The <a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" class="link">Rest Api</a> implemented by the server hosted on <a class="link" href="https://www.heroku.com/platform">Heroku</a> is used as an interface for the client to access player records while the game is in session in the browser.  
                                 </p>
                             </li>
                         </ul>
                         <div class="sticker-box">
+                            <NetlifyIcon />
                             <Icon size="64" color="#262525">
-                                <LogoVue />
+                                <Gamepad />
                             </Icon>
-                            <Icon size="64" color="#262525">
-                                <Json />
-                            </Icon>
-                            <Icon size="64" color="#262525">
-                                <Js />
-                            </Icon>
+                            <HerokuIcon />
                         </div>
                     </template>
                 </ProjectCard>
@@ -264,6 +265,9 @@ import LogoVue from '@vicons/ionicons5/LogoVue'
 import Json from '@vicons/carbon/Json'
 import Js from '@vicons/fa/Js';
 
+import HerokuIcon from '@/components/Icons/HerokuIcon.vue';
+import NetlifyIcon from '@/components/Icons/NetlifyIcon.vue'; 
+import Gamepad from '@vicons/fa/Gamepad'
 
 export default {
     name: "Portfolio Section",
@@ -272,7 +276,11 @@ export default {
         Icon,
         LogoVue,
         Json,
-        Js
+        Js,
+
+        HerokuIcon,
+        NetlifyIcon,
+        Gamepad
     }
 }
 </script>
