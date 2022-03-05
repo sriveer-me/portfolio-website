@@ -84,7 +84,29 @@
     text-transform: capitalize;
 }
 
+
+.body-heading{
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    
+    font-size: var(--font-large);
+    line-height: calc(var(--font-large) * 1.15); 
+    margin: var(--spacing-normal) 0;
+
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    text-align: center;
+
+    color: $primary-black;
+    &.dark-mode{
+        color: $primary-white;
+    }
+}
+
+
 .bodyHeading{
+
     font-family: "Roboto";
     font-style: normal;
     font-weight: 400;
