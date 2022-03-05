@@ -139,6 +139,7 @@
 <script>
 import Menu from '@/components/Navbar/Menu.vue';
 import {isMobile,isTablet,isDesktop} from '@/js/breakpoints.js';
+import {scrollToHomeSection,scrollToPortfolioSection,scrollToHireMeSection,scrollToContactSection} from '@/components/Navbar/scrollSectionsIntoView.js';
 
 import { Icon } from '@vicons/utils'
 import UserCircle from '@vicons/fa/UserCircle'
@@ -268,18 +269,17 @@ export default {
             hamburgerMenu.classList.remove('dark-mode');
         },
 
-
         homeButtonClicked(){
-            document.getElementById("home-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToHomeSection();
         },
         portfolioButtonClicked(){
-            document.getElementById("portfolio-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToPortfolioSection();
         },
         hireButtonClicked(){
-            document.getElementById("hire-me-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToHireMeSection();
         },
         contactButtonClicked(){
-            document.getElementById("contact-me-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToContactSection();
         }
     },
     mounted(){

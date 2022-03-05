@@ -110,6 +110,8 @@ ul{
 import { Icon } from '@vicons/utils'
 import UserCircle from '@vicons/fa/UserCircle'
 
+import {scrollToHomeSection,scrollToPortfolioSection,scrollToHireMeSection,scrollToContactSection} from '@/components/Navbar/scrollSectionsIntoView.js';
+
 export default {
     name: "Menu",
     components:{
@@ -118,16 +120,16 @@ export default {
     },
     methods:{
         homeButtonClicked(){
-            document.getElementById("home-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToHomeSection();
         },
         portfolioButtonClicked(){
-            document.getElementById("portfolio-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToPortfolioSection();
         },
         hireButtonClicked(){
-            document.getElementById("hire-me-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToHireMeSection();
         },
         contactButtonClicked(){
-            document.getElementById("contact-me-section").scrollIntoView({behavior: "smooth", block: "start"});
+            scrollToContactSection();
         }
     }
 }
