@@ -50,7 +50,8 @@ export default {
 
     img{
         width: 100%;
-        box-shadow: 5px 5px 10px #262525;
+        // box-shadow: 5px 5px 10px #262525;
+        box-shadow: 0px 0px 22px #262525;
     }
 }
 </style>
