@@ -12,16 +12,22 @@
             <div class="grid-two-way">
                 
                 <div class="left" id="contact-icon-tray">
-                    <Icon size="75">
-                        <LinkedinIcon class="contact-icon" id="contact-linkedin-icon"/>
-                    </Icon>
-                    <Icon size="75">
-                        <DiscordIcon class="contact-icon" id="contact-discord-icon" />
-                    </Icon>
+                    <a href="https://www.linkedin.com/in/veeru-neerukonda-b1bb0522b/" id="contact-linkedin-icon">
+                        <Icon size="75">
+                            <LinkedinIcon class="contact-icon" />
+                        </Icon>
+                    </a>
+                    <a href="https://www.discordapp.com/users/veerEmpyrean#7699" id="contact-discord-icon">
+                        <Icon size="75">
+                            <DiscordIcon class="contact-icon" />
+                        </Icon>
+                    </a>
                     <FirefoxIcon class="contact-icon" id="contact-firefox-icon"/>
-                    <Icon size="75">
-                        <GithubIcon class="contact-icon" id="contact-github-icon"/>
-                    </Icon>
+                    <a href="https://github.com/veeru-neerukonda" id="contact-github-icon">
+                        <Icon size="75">
+                            <GithubIcon class="contact-icon" />
+                        </Icon>
+                    </a>
                 </div>
                 <div class="right">
                     <form name="contact" method="POST" data-netlify="true" class="contact-form">

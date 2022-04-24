@@ -12,26 +12,26 @@
 
         <div class="icon-box">
             
-            <a class="box linkedIn-box" id="home-linkedin-box" href="#">
+            <a class="box linkedIn-box" id="home-linkedin-box" href="https://www.linkedin.com/in/veeru-neerukonda-b1bb0522b/">
                 <Icon size="75" >
                     <LinkedinIcon id="home-linkedin"/>
                 </Icon>
                 <h1 class="menu-item-text" v-if="!isDesktop">Linked In</h1>
             </a>
 
-            <a class="box discord-box" id="home-discord-box" href="#">
+            <a class="box discord-box" id="home-discord-box" href="https://www.discordapp.com/users/veerEmpyrean#7699">
                 <Icon size="75">
                     <DiscordIcon id="home-discord"/>
                 </Icon>
                 <h1 class="menu-item-text" v-if="!isDesktop">Discord</h1>
             </a>
 
-            <a class="box leave-message-here-box" id="home-firefox-box" href="#">
+            <a class="box leave-message-here-box" id="home-firefox-box" @click="scrollToContactMeSection" style="cursor: pointer">
                 <FirefoxIcon id="home-firefox"/>
                 <h1 class="menu-item-text" v-if="!isDesktop">Leave Message</h1>
             </a>
 
-            <a class="box github-box" id="home-github-box" href="#">
+            <a class="box github-box" id="home-github-box" href="https://github.com/veeru-neerukonda">
                 <Icon size="75">
                     <GithubIcon id="home-github"/>
                 </Icon>
@@ -60,6 +60,8 @@ import LinkedinIcon from '@vicons/fa/Linkedin';
 import DiscordIcon from '@vicons/fa/Discord';
 import GithubIcon from '@vicons/fa/Github';
 import FirefoxIcon from '@/components/Icons/FirefoxIcon.vue';
+
+import {scrollToContactSection} from '@/components/Navbar/scrollSectionsIntoView.js';
 
 export default {
     name: "HomeSection",
@@ -96,6 +98,10 @@ export default {
             }
             else console.log('could not determine the device inside the checkDevice function of the Navbar component');
         },
+        scrollToContactMeSection()
+        {
+            scrollToContactSection();
+        }
     },
     mounted(){
         this.checkDevice();
