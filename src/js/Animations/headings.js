@@ -16,10 +16,11 @@ let timelines = {};
 
 function observerMain(events,observer){ //eslint-disable-line
     events.forEach(function(event){
+        let tlm = timelines[`${event.target.id}`]; 
         if(event.isIntersecting === true){
             timelines[`${event.target.id}`].play();
         }
-        else{
+        else if(tlm.isActive() == false) {
             timelines[`${event.target.id}`].reverse();
         }
     });
@@ -27,7 +28,7 @@ function observerMain(events,observer){ //eslint-disable-line
 export function initHeadingObserver(){
     observer = new IntersectionObserver(observerMain,{
         root: null,
-        threshold: 0.5
+        threshold: 1.0
     });
 
     let portfolioHeading = document.getElementById('portfolio-hero-heading');
@@ -38,7 +39,8 @@ export function initHeadingObserver(){
 
     let contactMeHeading = document.getElementById('contact-me-heading');
     let contactMeSubHeading = document.getElementById('contact-me-sub-heading');
-    
+
+
     observer.observe(portfolioHeading);
     // observer.observe(portfolioSubHeading);
 
@@ -47,8 +49,8 @@ export function initHeadingObserver(){
 
     observer.observe(contactMeHeading);
     // observer.observe(contactMeSubHeading);
-
-    timelines[`${portfolioHeading.id}`] = genHeadingAnimation(portfolioHeading,portfolioSubHeading);
+    
+    timelines[`${portfolioHeading.id}`] = genHeadingAnimation(portfolioHeading,portfolioSubHeading)
     timelines[`${hireMeHeading.id}`] = genHeadingAnimation(hireMeHeading,hireMeSubHeading);
     timelines[`${contactMeHeading.id}`] = genHeadingAnimation(contactMeHeading,contactMeSubHeading);
 }
