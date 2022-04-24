@@ -49,8 +49,8 @@
                 </ProjectCard>
 
                 <ProjectCard
-                    class="portfolio-project-card" id="portfolio-project-card-1"
-                    style="grid-area: 'project-1'"
+                    class="portfolio-project-card" id="portfolio-project-card-2"
+                    style="grid-area: 'project-2'"
                     title="Quiz App"
                     :image="require('@/assets/images/quiz-app.png')"
                     imageAlt="Quiz App Image"
@@ -85,23 +85,56 @@
                         <div class="sticker-box">
                             <NetlifyIcon />
                             <Icon size="64" color="#262525">
-                                <Gamepad />
+                                <BoardGames20Filled />
                             </Icon>
                             <HerokuIcon />
                         </div>
                     </template>
                 </ProjectCard>
 
-                <ProjectCard
+               <ProjectCard
                     class="portfolio-project-card" id="portfolio-project-card-3"
                     style="grid-area: 'project-3'"
-                    title="E-Commerce Platform"
-                    image="https://via.placeholder.com/150"
-                    imageAlt="the placeholder image"
-                    liveLink="#" srcLink="#"
+                    title="Flappy Bird Game"
+                    :image="require('@/assets/images/flappy-bird-game-screenshot.png')"
+                    imageAlt="Flappy Bird Game Website"
+                    liveLink="https://bird-flap-game.herokuapp.com/" srcLink="https://github.com/ImmaculateEmpyrean/flappy-bird"
                 >
                     <template #projectDescription>
-                        <p class="bodyText">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et ipsum adipisci eum libero? Numquam dolorem officia doloribus itaque reiciendis dolores! Accusamus id necessitatibus ratione mollitia, ducimus porro sit veniam, sapiente nostrum rerum blanditiis illo quas molestias est non odit recusandae consectetur ad. Ratione eveniet in quasi nemo provident odit earum!</p>
+                        <p class="bodyText strong">
+                            This blockbuster game was rebuilt by using the <a class="link" href="https://www.w3schools.com/html/html5_canvas.asp">HTML Canvas Technology</a> and was subsequently deployed on <a class="link" href="https://www.heroku.com/platform">Heroku</a> for accessibility throughout the entire globe.
+                        </p>
+                        <ul class="project-description-list">
+                            <li>
+                                <p class="bodyText">
+                                  <a class="link" href="https://www.w3schools.com/html/html5_canvas.asp">Html5 Canvas</a> allowed development of this game without needing to worry much about underlying platform and <a class="link" href="https://en.wikipedia.org/wiki/List_of_rendering_APIs">Rendering Api</a> details like vertex and index buffer as well as shaders using <a class="link" href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl">HLSL</a> or equivalent. this not only allowed for quicker development but also gave me more time to look at other areas like sound and graphics. 
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The <a class="link" href="https://www.countryflagsapi.com/">Flags Api</a> is integrated inside the project so as to display to the user the country flag of their origin.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The server hosted on the platform <a class="link" href="https://www.heroku.com/platform">Heroku</a> is responsible for storing and maintaining player records using a <a href="https://www.mongodb.com/databases/types/transactional-databases" class="link">Transactional Database</a> .
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The <a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" class="link">Rest Api</a> implemented by the server hosted on <a class="link" href="https://www.heroku.com/platform">Heroku</a> is used as an interface for the client to access player records while the game is in session in the browser.  
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="sticker-box">
+                            <Icon size="64" color="#262525">
+                                <Html5 />
+                            </Icon>
+                            <Icon size="64" color="#262525">
+                                <Gamepad />
+                            </Icon>
+                            <HerokuIcon />
+                        </div>
                     </template>
                 </ProjectCard>
 
@@ -264,10 +297,12 @@ import { Icon } from '@vicons/utils'
 import LogoVue from '@vicons/ionicons5/LogoVue'
 import Json from '@vicons/carbon/Json'
 import Js from '@vicons/fa/Js';
+import Html5 from '@vicons/fa/Html5';
+import Gamepad from '@vicons/fa/Gamepad'
 
+import BoardGames20Filled from '@/components/Icons/BoardGameIcon.vue';
 import HerokuIcon from '@/components/Icons/HerokuIcon.vue';
 import NetlifyIcon from '@/components/Icons/NetlifyIcon.vue'; 
-import Gamepad from '@vicons/fa/Gamepad'
 
 export default {
     name: "Portfolio Section",
@@ -277,6 +312,8 @@ export default {
         LogoVue,
         Json,
         Js,
+        Html5,
+        BoardGames20Filled,
 
         HerokuIcon,
         NetlifyIcon,
