@@ -27,7 +27,7 @@ function observerMain(events,observer){ //eslint-disable-line
 export function initHeadingObserver(){
     observer = new IntersectionObserver(observerMain,{
         root: null,
-        threshold: 0.7
+        threshold: 0.5
     });
 
     let portfolioHeading = document.getElementById('portfolio-hero-heading');
