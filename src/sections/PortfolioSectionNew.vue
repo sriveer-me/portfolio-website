@@ -9,8 +9,20 @@
             <div class="card card-1">
                 <PhatProjectCard />
             </div>
-            <div class="card-2 card">card-2</div>
-            <div class="card-3 card">card-3</div>
+            <div class="card card-2">
+                <PhatProjectCard />
+            </div>
+            <div class="card card-3">
+                <PhatProjectCard />
+            </div>
+            <div class="card card-4">
+                <PhatProjectCard />
+            </div>
+        </div>
+
+        <div class="actions">
+            <a class="dashed-button menu-item-text" :href="require('@/assets/resume-veeru.pdf')" download="veeru-resume.pdf">Download My Resume</a>
+            <a class="dashed-button menu-item-text" href="#">View More Projects</a>
         </div>
     </section>
 </template>
@@ -35,14 +47,15 @@
 
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(3,1fr);
+    grid-template-rows: repeat(4,1fr);
 
     row-gap: 125px;
 
     grid-template-areas: 
         "card-1 card-1 card-1 card-1 card-1 ."
         ". card-2 card-2 card-2 card-2 card-2"
-        "card-3 card-3 card-3 card-3 card-3 .";
+        "card-3 card-3 card-3 card-3 card-3 ."
+        ". card-4 card-4 card-4 card-4 card-4";
 }
 
 .card{
@@ -57,7 +70,40 @@
 .card-3{
     grid-area: card-3;
 }
+.card-4{
+    grid-area: card-4;
+}
 
+.actions{
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-large);
+    row-gap: calc(var(--spacing-large) * 2);
+    @include for-tablet-portrait-up{
+        margin: 0;
+        row-gap: 0;
+    }
+
+    @include for-tablet-portrait-up{
+        flex-direction: row;
+        height: calc(var(--spacing-large) * 3);
+    }
+
+    column-gap: var(--spacing-large);
+    a{
+        flex: 1 1 50%;
+        
+        border: 3px dashed $primary-black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: $primary-black;
+        background-color: $primary-white;
+        text-decoration: none;
+    }
+}
 </style>
 
 <script>

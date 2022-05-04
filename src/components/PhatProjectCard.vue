@@ -2,6 +2,7 @@
     <div class="project-card">
     
         <div class="left">
+            <h1 class="body-heading">{{title}}</h1>
             <Carousel :images="images"/>
             <div class="tag-container">
                 <AvatarTag v-for="(tag,index) in tags" :name="tag.name" :image="tag.image" :key="String(`${name}${index}`)" />

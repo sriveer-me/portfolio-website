@@ -54,7 +54,7 @@ export default defineComponent({
 
 .carousel-img {
   width: 100%;
-  height: 480px;
+  height: 400px;
   object-fit: cover;
 }
 
