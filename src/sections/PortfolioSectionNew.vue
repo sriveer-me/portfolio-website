@@ -32,7 +32,7 @@
 .projects-grid{
     margin-top: var(--spacing-large);
     width: 100vw;
-    min-height: 300px;
+    // min-height: 300px;
 
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -48,6 +48,7 @@
 
 .card{
     overflow-x: hidden;
+    padding: var(--spacing-large);
 }
 
 .card-1{

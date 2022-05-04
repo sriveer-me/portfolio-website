@@ -1,25 +1,38 @@
 <template>
     <div class="project-card">
-        <div class="header">
-            <h1 class="body-heading">{{title}}</h1>
-            <a href="#">ResetCard</a>
-        </div>
-
-        <div class="content">
-            <div class="left">
-                <Carousel :images="images"/>
-                <div class="tag-container">
-
-                </div>
+    
+        <div class="left">
+            <Carousel :images="images"/>
+            <div class="tag-container">
+                <AvatarTag v-for="(tag,index) in tags" :name="tag.name" :image="tag.image" :key="String(`${name}${index}`)" />
             </div>
-            <div class="right">
-                
+            <div class="action-group">
+                <a :href="liveLink" class="button bodyText strong alternate">
+                    <Icon>
+                        <OpenOutline />
+                    </Icon>
+                    View Live
+                </a>
+                <a :href="srcLink" class="button bodyText strong alternate">
+                    <Icon>
+                        <BranchFork24Regular />
+                    </Icon>
+                    Source
+                </a>
             </div>
         </div>
+        
+        <div class="right">
+            <ul class="project-description">
+                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi debitis esse nesciunt? Voluptatum, repellendus perspiciatis.</li>
+                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum est laboriosam rerum reiciendis ut nam explicabo deserunt corrupti fuga!</li>
+                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate repellat reiciendis repellendus provident nostrum quibusdam eligendi consectetur possimus quos ex sequi magnam ipsa iure, perferendis veritatis ipsam nesciunt, qui blanditiis.</li>
+            </ul>
+            <div class="icon-box">
 
-        <div class="footer">
-
+            </div>
         </div>
+    
     </div>
 </template>
 
@@ -29,45 +42,69 @@
 
 .project-card{
     display: flex;
+    flex-direction: row;
+}
+
+.left{
+    flex: 0 0 40%;
+    overflow: hidden;
+    height: fit-content;
+
+    display: flex;
     flex-direction: column;
-    justify-content: stretch;
+    justify-content: center;
+    align-items: center;
+    row-gap: var(--spacing-normal);
 }
 
-.header{
-    flex: 0 0 50px;
-    background-color: red;
+.right{
+    flex: 0 0 60%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: var(--spacing-normal);
 }
 
-.content{
-    flex: 1 1 auto;
-    background-color: green;
+.action-group{
+    display: flex;
+    justify-content: space-between;
 }
 
-.footer{
-    flex: 0 0 50px;
-    background-color: blue;
-}
+.button{
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--spacing-normal);
+    align-items: center;
 
+    text-decoration: none;
+    color: $primary-white;
+    background-color: map-get($accent,"light-mode");
+
+    padding: var(--spacing-small) var(--spacing-normal);
+
+    border-radius: 5px;
+}
 </style>
 
 <script>
-// import { Icon } from '@vicons/utils'
-// import  BranchFork24Regular  from '@vicons/fluent/BranchFork24Regular';
-// import  OpenOutline  from '@vicons/ionicons5/OpenOutline';
-
-// import ProjectCardImage from '@/components/ProjectCardImage.vue';
-
 import Carousel from '@/components/Carousel.vue';
+import AvatarTag from '@/components/AvatarTag.vue';
+
+import { Icon } from '@vicons/utils'
+import  BranchFork24Regular  from '@vicons/fluent/BranchFork24Regular';
+import  OpenOutline  from '@vicons/ionicons5/OpenOutline';
 
 export default {
     name: "Project Card",
     components:{
-        Carousel
-        // Icon,
-        // BranchFork24Regular,
-        // OpenOutline,
-
-        // ProjectCardImage
+        Icon,
+        BranchFork24Regular,
+        OpenOutline,
+        
+        Carousel,
+        AvatarTag
     },
     props:{
         title:{
@@ -95,6 +132,19 @@ export default {
             type:String,
             default:"https://www.google.com"
         },
+
+        tags:{
+            default: [
+                {
+                    name: "NoName Tag - 1",
+                    image: "https://cdnimg103.lizhi.fm/user/2017/02/04/2583325032200238082_160x160.jpg"
+                },
+                {
+                    name: "NoName Tag - 2",
+                    image: "https://cdnimg103.lizhi.fm/user/2017/02/04/2583325032200238082_160x160.jpg"
+                }
+            ]
+        }
     }
 }
 </script>
