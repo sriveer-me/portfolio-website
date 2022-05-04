@@ -46,23 +46,16 @@
 }
 
 .card{
-    overflow-x: hidden;
-    padding: var(--spacing-large);
+    overflow-x: hidden; //important without this naive-ui carousel is not working
 }
-
 .card-1{
     grid-area: card-1;
-    background-color: red;
 }
-
 .card-2{
     grid-area: card-2;
-    background-color: red;
 }
-
 .card-3{
     grid-area: card-3;
-    background-color: red;
 }
 
 </style>

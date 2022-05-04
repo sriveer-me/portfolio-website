@@ -44,6 +44,11 @@
 .project-card{
     display: flex;
     flex-direction: row;
+    background-color: $primary-white;
+
+    margin: var(--spacing-large);
+    padding: var(--spacing-large);
+    border-radius: 5px;
 }
 
 .left{
