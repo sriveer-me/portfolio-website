@@ -27,6 +27,7 @@
                 <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi debitis esse nesciunt? Voluptatum, repellendus perspiciatis.</li>
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum est laboriosam rerum reiciendis ut nam explicabo deserunt corrupti fuga!</li>
                 <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate repellat reiciendis repellendus provident nostrum quibusdam eligendi consectetur possimus quos ex sequi magnam ipsa iure, perferendis veritatis ipsam nesciunt, qui blanditiis.</li>
+               
             </ul>
             <div class="icon-box">
 
@@ -52,8 +53,6 @@
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     row-gap: var(--spacing-normal);
 }
 
@@ -67,9 +66,20 @@
     row-gap: var(--spacing-normal);
 }
 
+
+.tag-container{
+    display: flex;
+    flex-direction: row;
+    column-gap: var(--spacing-small);
+    flex-wrap: wrap;
+
+    width: 100%;
+}
+
 .action-group{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .button{
@@ -142,7 +152,16 @@ export default {
                 {
                     name: "NoName Tag - 2",
                     image: "https://cdnimg103.lizhi.fm/user/2017/02/04/2583325032200238082_160x160.jpg"
+                },
+                 {
+                    name: "Ganna",
+                    image: "https://cdnimg103.lizhi.fm/user/2017/02/04/2583325032200238082_160x160.jpg"
+                },
+                 {
+                    name: "Sigmna",
+                    image: "https://cdnimg103.lizhi.fm/user/2017/02/04/2583325032200238082_160x160.jpg"
                 }
+
             ]
         }
     }

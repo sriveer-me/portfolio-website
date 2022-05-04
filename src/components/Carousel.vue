@@ -51,13 +51,10 @@ export default defineComponent({
 </script>
 
 <style>
-/* .carousel{
-    width: 10000px;
-} */
 
 .carousel-img {
   width: 100%;
-  height: 240px;
+  height: 480px;
   object-fit: cover;
 }
 

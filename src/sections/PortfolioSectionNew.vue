@@ -32,18 +32,17 @@
 .projects-grid{
     margin-top: var(--spacing-large);
     width: 100vw;
-    // min-height: 300px;
 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(3,1fr);
 
-    row-gap: 250px;
+    row-gap: 125px;
 
     grid-template-areas: 
-        "card-1 card-1 ."
-        ". card-2 card-2"
-        "card-3 card-3 .";
+        "card-1 card-1 card-1 card-1 card-1 ."
+        ". card-2 card-2 card-2 card-2 card-2"
+        "card-3 card-3 card-3 card-3 card-3 .";
 }
 
 .card{
