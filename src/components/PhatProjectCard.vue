@@ -66,6 +66,8 @@
     justify-content: center;
     align-items: center;
     row-gap: var(--spacing-normal);
+
+    padding-right: var(--spacing-large);
 }
 
 
@@ -73,6 +75,7 @@
     display: flex;
     flex-direction: row;
     column-gap: var(--spacing-small);
+    row-gap: var(--spacing-small);
     flex-wrap: wrap;
 
     width: 100%;
@@ -80,8 +83,11 @@
 
 .action-group{
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
+
+    column-gap: var(--spacing-normal);
+    margin-top: var(--spacing-normal);
 }
 
 .button{
