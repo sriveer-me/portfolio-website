@@ -6,7 +6,9 @@
         </div>
         
         <div class="projects-grid">
-            <PhatProjectCard class="card-1" />
+            <div class="card card-1">
+                <PhatProjectCard />
+            </div>
             <div class="card-2 card">card-2</div>
             <div class="card-3 card">card-3</div>
         </div>
@@ -29,19 +31,23 @@
 
 .projects-grid{
     margin-top: var(--spacing-large);
-    width: 100%;
+    width: 100vw;
     min-height: 300px;
 
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(3,1fr);
 
-    row-gap: var(--spacing-normal);
+    row-gap: 250px;
 
     grid-template-areas: 
         "card-1 card-1 ."
         ". card-2 card-2"
         "card-3 card-3 .";
+}
+
+.card{
+    overflow-x: hidden;
 }
 
 .card-1{

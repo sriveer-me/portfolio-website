@@ -7,7 +7,7 @@
 
         <div class="content">
             <div class="left">
-                <Carousel />
+                <Carousel :images="images"/>
                 <div class="tag-container">
 
                 </div>
@@ -74,9 +74,13 @@ export default {
             type: String,
             default: "Project Title"
         },
-        image:{
-            type:String,
-            default: "https://via.placeholder.com/200"
+        images:{
+            default: [
+                "https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg",
+                "https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg",
+                "https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel3.jpeg",
+                "https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel4.jpeg"
+            ]
         },
         imageAlt:{
             type:String,

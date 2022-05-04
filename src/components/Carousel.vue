@@ -1,7 +1,7 @@
 <template>
-  <n-carousel show-arrow autoplay class="carousel">
+  <n-carousel show-arrow autoplay>
     
-    <img v-for="(img,index) in imgs" class="carousel-img" :src="img" alt="carouselImage" :key="img+index">
+    <img v-for="(img,index) in images" class="carousel-img" :src="img" alt="carouselImage" :key="img+index">
     
     <template #arrow="{ prev, next }">
     <div class="custom-arrow">
@@ -38,7 +38,7 @@ export default defineComponent({
     NCarousel
   },
   props:{
-      imgs: {
+      images: {
           default: [   
             "https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel1.jpeg",
             "https://naive-ui.oss-cn-beijing.aliyuncs.com/carousel-img/carousel2.jpeg",
@@ -51,9 +51,9 @@ export default defineComponent({
 </script>
 
 <style>
-.carousel{
-    width: 500px;
-}
+/* .carousel{
+    width: 10000px;
+} */
 
 .carousel-img {
   width: 100%;
