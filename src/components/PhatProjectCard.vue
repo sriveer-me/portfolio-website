@@ -24,12 +24,7 @@
         </div>
         
         <div class="right">
-            <ul class="project-description">
-                <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nisi debitis esse nesciunt? Voluptatum, repellendus perspiciatis.</li>
-                <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur voluptatum est laboriosam rerum reiciendis ut nam explicabo deserunt corrupti fuga!</li>
-                <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate repellat reiciendis repellendus provident nostrum quibusdam eligendi consectetur possimus quos ex sequi magnam ipsa iure, perferendis veritatis ipsam nesciunt, qui blanditiis.</li>
-               
-            </ul>
+            <slot name="projectDescription" />
             <div class="icon-box">
 
             </div>
@@ -45,6 +40,7 @@
 .project-card{
     display: flex;
     flex-direction: row;
+    column-gap: var(--spacing-large);
     background-color: $primary-white;
 
     margin: var(--spacing-large);

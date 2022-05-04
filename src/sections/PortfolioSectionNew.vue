@@ -7,7 +7,44 @@
         
         <div class="projects-grid">
             <div class="card card-1">
-                <PhatProjectCard />
+                <PhatProjectCard>
+                    <template #projectDescription>
+                        <p class="strong text-center text-small">
+                            This blockbuster game was rebuilt by using the <a class="link" href="https://www.w3schools.com/html/html5_canvas.asp">HTML Canvas Technology</a> and was subsequently deployed on <a class="link" href="https://www.heroku.com/platform">Heroku</a> for accessibility throughout the entire globe.
+                        </p>
+                        <ul class="project-description-list">
+                            <li>
+                                <p class="bodyText">
+                                  <a class="link" href="https://www.w3schools.com/html/html5_canvas.asp">Html5 Canvas</a> allowed development of this game without needing to worry much about underlying platform and <a class="link" href="https://en.wikipedia.org/wiki/List_of_rendering_APIs">Rendering Api</a> details like vertex and index buffer as well as shaders using <a class="link" href="https://docs.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl">HLSL</a> or equivalent. this not only allowed for quicker development but also gave me more time to look at other areas like sound and graphics. 
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The <a class="link" href="https://www.countryflagsapi.com/">Flags Api</a> is integrated inside the project so as to display to the user the country flag of their origin.
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The server hosted on the platform <a class="link" href="https://www.heroku.com/platform">Heroku</a> is responsible for storing and maintaining player records using a <a href="https://www.mongodb.com/databases/types/transactional-databases" class="link">Transactional Database</a> .
+                                </p>
+                            </li>
+                            <li>
+                                <p class="bodyText">
+                                    The <a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" class="link">Rest Api</a> implemented by the server hosted on <a class="link" href="https://www.heroku.com/platform">Heroku</a> is used as an interface for the client to access player records while the game is in session in the browser.  
+                                </p>
+                            </li>
+                        </ul>
+                        <div class="sticker-box">
+                            <Icon size="64" color="#262525">
+                                <Html5 />
+                            </Icon>
+                            <Icon size="64" color="#262525">
+                                <Gamepad />
+                            </Icon>
+                            <HerokuIcon />
+                        </div>
+                    </template>
+                </PhatProjectCard>
             </div>
             <div class="card card-2">
                 <PhatProjectCard />
@@ -103,6 +140,25 @@
         background-color: $primary-white;
         text-decoration: none;
     }
+}
+
+.link{
+    text-decoration: none;
+    color: map-get($accent,"light-mode");
+    font-weight: 400;
+}
+
+.project-description-list{
+    list-style:square;
+    li{
+        margin-top: var(--spacing-normal);
+    }
+}
+
+.sticker-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 </style>
 
