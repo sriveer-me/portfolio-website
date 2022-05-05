@@ -13,10 +13,10 @@
                 <QuizAppPhatCard />
             </div>
             <div class="card card-3">
-                <PhatProjectCard />
+                <TicTacToePhatCard />
             </div>
             <div class="card card-4">
-                <PhatProjectCard />
+                <BlogWebsitePhatCard />
             </div>
         </div>
 
@@ -73,17 +73,52 @@
 .card-4{
     grid-area: card-4;
 }
+
+.actions{
+    display: flex;
+    flex-direction: column;
+    margin: var(--spacing-large);
+    row-gap: calc(var(--spacing-large) * 2);
+    @include for-tablet-portrait-up{
+        margin: 0;
+        row-gap: 0;
+    }
+
+    @include for-tablet-portrait-up{
+        flex-direction: row;
+        height: calc(var(--spacing-large) * 3);
+    }
+
+    column-gap: var(--spacing-large);
+    a{
+        flex: 1 1 50%;
+        
+        border: 3px dashed $primary-black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        color: $primary-black;
+        background-color: $primary-white;
+        text-decoration: none;
+    }
+}
 </style>
 
 <script>
 import FlappyBirdPhatCard from '@/components/FlappyBirdPhatCard.vue';
 import QuizAppPhatCard from '@/components/QuizAppPhatCard.vue';
+import TicTacToePhatCard from '../components/TicTacToePhatCard.vue';
+import BlogWebsitePhatCard from '../components/BlogWebsitePhatCard.vue';
 
 export default {
     name: "PortfolioSectionNew",
     components:{
         FlappyBirdPhatCard,
-        QuizAppPhatCard
+        QuizAppPhatCard,
+        TicTacToePhatCard,
+        BlogWebsitePhatCard,
     }
 
 }

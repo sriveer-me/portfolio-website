@@ -1,6 +1,6 @@
 <template>
     <PhatProjectCard 
-        title="Flappy Bird Game"
+        title="Blog Website"
         :tags="[
             {
                 name: 'HTML5',
@@ -39,6 +39,10 @@
                 image: require('@/assets/images/heroku-logo.png')
             },
             {
+                name: 'Netlify',
+                image: require('@/assets/images/netlify-logo.png')
+            },
+            {
                 name: 'JSON',
                 image: require('@/assets/images/json-logo.png')
             },
@@ -48,46 +52,45 @@
             },
         ]"
         :images="[
-            require('@/assets/images/flappy-bird-full-website-1.png'),
-            require('@/assets/images/flappy-bird-full-website-2.png'),
-            require('@/assets/images/flappy-bird-full-website-3.png'),
-            require('@/assets/images/flappy-bird-full-website-4.png')
+            require('@/assets/images/quiz-app-1.png'),
+            require('@/assets/images/quiz-app-2.png'),
+            require('@/assets/images/quiz-app-3.png'),
+            require('@/assets/images/quiz-app-4.png'),
+            require('@/assets/images/quiz-app-5.png'),
+            require('@/assets/images/quiz-app-6.png'),
         ]"
     >
         <template #projectDescription>
             <p class="strong text-center text-small">
-                This blockbuster game was rebuilt using <a class="link" href="https://www.w3schools.com/html/html5_canvas.asp">HTML Canvas Technology</a> and was subsequently deployed on <a class="link" href="https://www.heroku.com/platform">Heroku</a> so that it could once again be competed on and enjoyed by millions of players all over the world.
+                This fully responsive website written using <a class="link" href="https://v3.vuejs.org/">Vue3</a> packs a pretty punch with its impressive features like:                            
             </p>
             <ul class="project-description-list">
                 <li>
                     <p class="bodyText">
-                        <a class="link" href="https://www.w3schools.com/html/html5_canvas.asp">Html5 Canvas</a> allowed development of this game without needing to worry much about underlying platform and <a class="link" href="https://en.wikipedia.org/wiki/List_of_rendering_APIs">Rendering Api</a> details. This not only allowed for quicker development but also gave me more time to look at other areas like audio, effects and multiplayer.
+                        Fully featured searching with the capability to <a class="link" href="https://fusejs.io/">Fuzzy Search</a> and result filter using <strong>Custom Tags</strong> easily declarable by a non programmer in a seperate json file.
                     </p>
                 </li>
                 <li>
                     <p class="bodyText">
-                        The <a class="link" href="https://www.countryflagsapi.com/">Flags Api</a> is integrated inside the project so as to display to the user the country flag of their origin.
+                        The integration of a component library in the form of <a class="link" href="https://www.naiveui.com/en-US/os-theme">Naive UI</a> allows me to quickly and correctly implement complex Ui elements which otherwise would have taken far too long to write anf test for an acceptable production level performance.
                     </p>
                 </li>
                 <li>
                     <p class="bodyText">
-                        The server hosted on the platform <a class="link" href="https://www.heroku.com/platform">Heroku</a> is responsible for storing and maintaining player records using a <a href="https://www.mongodb.com/databases/types/transactional-databases" class="link">Transactional Database</a> .
-                    </p>
-                </li>
-                <li>
-                    <p class="bodyText">
-                        A <a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" class="link">Rest Api</a> implemented by the server hosted on <a class="link" href="https://www.heroku.com/platform">Heroku</a> is used as an interface for the client to access player records while the game is in session on the browser.  
+                        <a class="link" href="https://router.vuejs.org/">Vue router</a> coupled with <a class="link" href="https://v3.vuejs.org/guide/transitions-enterleave.html#transitioning-single-elements-components">transitions using Vue3</a> allows for seamless transition between different pages of the blog all the while retaining the feel of a single page application.
                     </p>
                 </li>
             </ul>
             <div class="sticker-box">
                 <Icon size="64" color="#262525">
-                    <Html5 />
+                    <LogoVue />
                 </Icon>
                 <Icon size="64" color="#262525">
-                    <Gamepad />
+                    <Json />
                 </Icon>
-                <HerokuIcon />
+                <Icon size="64" color="#262525">
+                    <Js />
+                </Icon>
             </div>
         </template>
     </PhatProjectCard>
@@ -122,9 +125,10 @@
 import PhatProjectCard from '@/components/PhatProjectCard';
 
 import { Icon } from '@vicons/utils'
-import HerokuIcon from '@/components/Icons/HerokuIcon.vue';
-import Html5 from '@vicons/fa/Html5';
-import Gamepad from '@vicons/fa/Gamepad'
+
+import LogoVue from '@vicons/ionicons5/LogoVue'
+import Json from '@vicons/carbon/Json'
+import Js from '@vicons/fa/Js';
 
 export default {
     name: "FlappyBirdPhatCard",
@@ -132,9 +136,9 @@ export default {
         PhatProjectCard,
 
         Icon,
-        HerokuIcon,
-        Html5,
-        Gamepad
+        LogoVue,
+        Json,
+        Js   
     }
 }
 </script>

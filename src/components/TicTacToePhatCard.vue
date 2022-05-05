@@ -1,63 +1,35 @@
 <template>
     <PhatProjectCard 
-        title="Quiz Game"
+        title="AI Driven Tic-tac-toe"
         :tags="[
             {
-                name: 'HTML5',
-                image: require('@/assets/images/html-logo.png')
+                name: 'Godot',
+                image: require('@/assets/images/godot-logo.png')
             },
             {
-                name: 'CSS3',
-                image: require('@/assets/images/css-logo.png')
+                name: 'C',
+                image: require('@/assets/images/c-logo.png')
             },
             {
-                name: 'JavaScript',
-                image: require('@/assets/images/js-logo.png')
+                name: 'C++',
+                image: require('@/assets/images/cpp-logo.png')
             },
             {
-                name: 'Vue3',
-                image: require('@/assets/images/vue3-logo.png')
+                name: 'C#',
+                image: require('@/assets/images/c-sharp-logo.png')
             },
             {
-                name: 'Naive UI',
-                image: require('@/assets/images/naive-ui-logo.png')
-            },
-            {
-                name: 'Bulma',
-                image: require('@/assets/images/bulma-logo.png')
-            },
-            {
-                name: 'Node.js',
-                image: require('@/assets/images/nodejs-logo.png')
-            },
-            {
-                name: 'Express.js',
-                image: require('@/assets/images/express-logo.png')
-            },
-            {
-                name: 'Heroku',
-                image: require('@/assets/images/heroku-logo.png')
-            },
-            {
-                name: 'Netlify',
-                image: require('@/assets/images/netlify-logo.png')
-            },
-            {
-                name: 'JSON',
-                image: require('@/assets/images/json-logo.png')
-            },
-            {
-                name: 'MySQL',
-                image: require('@/assets/images/mysql-logo.png')
-            },
+                name: 'AI',
+                image: require('@/assets/images/ai-logo.png')
+            }
         ]"
         :images="[
-            require('@/assets/images/quiz-app-1.png'),
-            require('@/assets/images/quiz-app-2.png'),
-            require('@/assets/images/quiz-app-3.png'),
-            require('@/assets/images/quiz-app-4.png'),
-            require('@/assets/images/quiz-app-5.png'),
-            require('@/assets/images/quiz-app-6.png'),
+            require('@/assets/images/ai-tic-tac-toe-1.png'),
+            require('@/assets/images/ai-tic-tac-toe-2.png'),
+            require('@/assets/images/ai-tic-tac-toe-3.png'),
+            require('@/assets/images/ai-tic-tac-toe-4.png'),
+            require('@/assets/images/ai-tic-tac-toe-5.png'),
+            require('@/assets/images/ai-tic-tac-toe-6.png'),
         ]"
     >
         <template #projectDescription>
