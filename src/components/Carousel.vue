@@ -6,10 +6,14 @@
     <template #arrow="{ prev, next }">
     <div class="custom-arrow">
         <button type="button" class="curtom-arrow--left" @click="prev">
-        <n-icon><ArrowBack /></n-icon>
+          <n-icon color="#2D56E5" size="18">
+            <ArrowBack />
+          </n-icon>
         </button>
         <button type="button" class="curtom-arrow--right" @click="next">
-        <n-icon><ArrowForward /></n-icon>
+          <n-icon color="#2D56E5" size="18">
+            <ArrowForward />
+          </n-icon>
         </button>
     </div>
     </template>
@@ -27,7 +31,7 @@
 </template>
 
 <script>
-import {NCarousel} from 'naive-ui';
+import {NCarousel,NIcon} from 'naive-ui';
 import { ArrowBack, ArrowForward } from "@vicons/ionicons5";
 import { defineComponent } from "vue";
 
@@ -35,7 +39,8 @@ export default defineComponent({
   components: {
     ArrowBack,
     ArrowForward,
-    NCarousel
+    NCarousel,
+    NIcon
   },
   props:{
       images: {
@@ -55,7 +60,7 @@ export default defineComponent({
 .carousel-img {
   width: 100%;
   height: 400px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .custom-arrow {
