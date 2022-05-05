@@ -10,7 +10,7 @@
                 <FlappyBirdPhatCard />
             </div>
             <div class="card card-2">
-                <PhatProjectCard />
+                <QuizAppPhatCard />
             </div>
             <div class="card card-3">
                 <PhatProjectCard />
@@ -76,12 +76,14 @@
 </style>
 
 <script>
-import FlappyBirdPhatCard from '@/components/FlappyBirdPhatCard.vue'; 
+import FlappyBirdPhatCard from '@/components/FlappyBirdPhatCard.vue';
+import QuizAppPhatCard from '@/components/QuizAppPhatCard.vue';
 
 export default {
     name: "PortfolioSectionNew",
     components:{
-        FlappyBirdPhatCard
+        FlappyBirdPhatCard,
+        QuizAppPhatCard
     }
 
 }
