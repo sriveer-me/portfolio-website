@@ -52,12 +52,10 @@
             },
         ]"
         :images="[
-            require('@/assets/images/quiz-app-1.png'),
-            require('@/assets/images/quiz-app-2.png'),
-            require('@/assets/images/quiz-app-3.png'),
-            require('@/assets/images/quiz-app-4.png'),
-            require('@/assets/images/quiz-app-5.png'),
-            require('@/assets/images/quiz-app-6.png'),
+            require('@/assets/images/project-blog-1.png'),
+            require('@/assets/images/project-blog-2.png'),
+            require('@/assets/images/project-blog-3.png'),
+            require('@/assets/images/project-blog-4.png'),
         ]"
     >
         <template #projectDescription>
