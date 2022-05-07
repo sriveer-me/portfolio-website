@@ -87,6 +87,14 @@
     flex-wrap: wrap;
 
     width: 100%;
+
+    @include for-tablet-portrait-up{
+        justify-content: center;
+    }
+
+    @include for-desktop-up{
+        justify-content: flex-start;
+    }
 }
 
 .action-group{
