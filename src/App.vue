@@ -6,8 +6,7 @@
 
     <div id="portfolio-section-complete">
         <SectionGap  class="dark-mode"/>
-        <PortfolioSectionNew />
-        <!-- <PortfolioSection /> -->
+        <PortfolioSection />
     </div>
 
     <div id="hire-me-section-complete">
@@ -27,8 +26,7 @@ import {generateAnimation} from '@/js/Animations/main.js';
 import {generateNavObserver} from '@/js/navObserver.js';
 
 import HomeSection from '@/sections/HomeSection.vue';
-// import PortfolioSection from '@/sections/PortfolioSection.vue';
-import PortfolioSectionNew from '@/sections/PortfolioSectionNew.vue';
+import PortfolioSection from '@/sections/PortfolioSection.vue';
 import HireMeSection from '@/sections/HireMe.vue';
 import ContactMeSection from '@/sections/ContactMeSection.vue';
 
@@ -41,7 +39,7 @@ export default {
     components:{
         HomeSection,
         //PortfolioSection,
-        PortfolioSectionNew,
+        PortfolioSection,
         HireMeSection,
         ContactMeSection,
 
