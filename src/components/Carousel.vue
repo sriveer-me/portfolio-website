@@ -1,7 +1,6 @@
 <template>
   <n-carousel show-arrow autoplay>
-    
-    <img v-for="(img,index) in images" class="carousel-img" :src="img" alt="carouselImage" :key="img+index">
+    <ImageComponent v-for="(image,index) in images" :image="image" height="400" :key="`${image}+${index}+CarouselImageComponent`" />      
     
     <template #arrow="{ prev, next }">
     <div class="custom-arrow">
@@ -31,16 +30,19 @@
 </template>
 
 <script>
-import {NCarousel,NIcon} from 'naive-ui';
+import { NCarousel,NIcon } from 'naive-ui';
 import { ArrowBack, ArrowForward } from "@vicons/ionicons5";
 import { defineComponent } from "vue";
+import ImageComponent from '@/components/ImageComponent.vue';
 
 export default defineComponent({
   components: {
     ArrowBack,
     ArrowForward,
     NCarousel,
-    NIcon
+    NIcon,
+
+    ImageComponent
   },
   props:{
       images: {
@@ -56,13 +58,6 @@ export default defineComponent({
 </script>
 
 <style>
-
-.carousel-img {
-  width: 100%;
-  height: 400px;
-  object-fit: contain;
-}
-
 .custom-arrow {
   display: flex;
   position: absolute;
