@@ -39,7 +39,15 @@
 
 .project-card{
     display: flex;
-    flex-direction: row;
+    
+    flex-direction: column;
+    row-gap: var(--spacing-large);
+
+    @include for-tablet-portrait-up{
+        flex-direction: row;
+        row-gap: 0;
+    }
+
     column-gap: var(--spacing-large);
     background-color: $primary-white;
 

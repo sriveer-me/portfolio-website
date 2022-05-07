@@ -47,15 +47,23 @@
 
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    grid-template-rows: repeat(4,1fr);
-
+    
     row-gap: 125px;
 
     grid-template-areas: 
+        "card-1 card-1 card-1 card-1 card-1 card-1"
+        "card-2 card-2 card-2 card-2 card-2 card-2"
+        "card-3 card-3 card-3 card-3 card-3 card-3"
+        "card-4 card-4 card-4 card-4 card-4 card-4";
+    
+    @include for-desktop-up
+    {
+        grid-template-areas: 
         "card-1 card-1 card-1 card-1 card-1 ."
         ". card-2 card-2 card-2 card-2 card-2"
         "card-3 card-3 card-3 card-3 card-3 ."
         ". card-4 card-4 card-4 card-4 card-4";
+    }
 }
 
 .card{
