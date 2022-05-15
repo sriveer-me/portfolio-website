@@ -88,7 +88,7 @@ export function genCardTimeline(domElement,fromLeft)
     {
         scale: 1,
         ease: "elastic.out(1, 0.3)" //eslint-disable-line
-    },0.25);
+    },0.25,"lightUpElements");
 
 
     //cache the timeline
