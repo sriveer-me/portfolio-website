@@ -95,6 +95,7 @@
 
     width: 100%;
 
+    justify-content: center;
     @include for-tablet-portrait-up{
         justify-content: center;
     }
@@ -106,11 +107,15 @@
 
 .action-group{
     display: flex;
-    justify-content: flex-start;
+    margin-top: var(--spacing-normal);
     width: 100%;
 
-    column-gap: var(--spacing-normal);
-    margin-top: var(--spacing-normal);
+    justify-content: space-around;
+
+    @include for-desktop-up{
+        justify-content: flex-start;
+        column-gap: var(--spacing-normal);
+    }
 }
 
 .button{
