@@ -1,3 +1,11 @@
+@use './color' as *;
+
 .cursor-pointer {
     cursor: pointer;
+}
+
+.link{
+    text-decoration: none;
+    color: map-get($accent,"light-mode");
+    font-weight: 400;
 }

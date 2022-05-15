@@ -24,9 +24,16 @@
         </div>
         
         <div class="right">
-            <slot name="projectDescription" />
-            <div class="icon-box">
+            <p class="strong text-center text-small">
+                <slot name="project-description-heading" />
+            </p>
 
+            <ul class="project-description-list">
+                <slot name="project-description-list" />
+            </ul>
+
+            <div class="sticker-box">
+                <slot name="sticker-box" />
             </div>
         </div>
     
@@ -119,6 +126,17 @@
     padding: var(--spacing-small) var(--spacing-normal);
 
     border-radius: 5px;
+}
+
+.project-description-list{
+    list-style:square;
+}
+
+.sticker-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 70%;
 }
 </style>
 

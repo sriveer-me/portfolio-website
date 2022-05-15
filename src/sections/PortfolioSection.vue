@@ -120,6 +120,8 @@ import QuizAppPhatCard from '@/components/PhatCards/QuizAppPhatCard.vue';
 import TicTacToePhatCard from '@/components/PhatCards/TicTacToePhatCard.vue';
 import BlogWebsitePhatCard from '@/components/PhatCards/BlogWebsitePhatCard.vue';
 
+import {genCardTimeline} from '@/js/Animations/PortfolioCardTimelineGenerator.js';
+
 export default {
     name: "PortfolioSectionNew",
     components:{
@@ -127,6 +129,20 @@ export default {
         QuizAppPhatCard,
         TicTacToePhatCard,
         BlogWebsitePhatCard,
+    },
+    mounted()
+    {
+        let flappyBird = this.$el.querySelector('.card-1');
+        let QuizAppPhatCard = this.$el.querySelector('.card-2');
+
+        let tlms = [
+            genCardTimeline(flappyBird,true),
+            genCardTimeline(QuizAppPhatCard,false)
+        ];
+        
+        tlms.forEach(function(el){
+            el.play();
+        })
     }
 
 }
