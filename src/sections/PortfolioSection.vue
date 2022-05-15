@@ -132,18 +132,37 @@ export default {
     },
     mounted()
     {
-        let flappyBird = this.$el.querySelector('.card-1');
-        let QuizAppPhatCard = this.$el.querySelector('.card-2');
+        let flappyBirdEnclosure = this.$el.querySelector('.card-1');
+        let quizAppEnclosure = this.$el.querySelector('.card-2');
+        let TicTacToeEnclosure = this.$el.querySelector('.card-3');
+        let BlogWebsiteEnclosure = this.$el.querySelector('.card-4');
 
-        let tlms = [
-            genCardTimeline(flappyBird,true),
-            genCardTimeline(QuizAppPhatCard,false)
-        ];
-        
-        tlms.forEach(function(el){
-            el.play();
+        let cards = [...this.$el.querySelectorAll('.card')];
+        let flag = true;
+        let cardTimelines = cards.map(function(card) {
+            flag = !flag;
+            return genCardTimeline(card,!flag);
         })
-    }
 
+        function cardObserverMain(observations)
+        {
+            observations.forEach(observation => {
+                if(observation.isIntersecting === true)
+                {
+                    let index = cards.findIndex(card => card === observation.target);
+                    cardTimelines[index].play();
+                }
+            });
+        }
+
+        let cardObserver = new IntersectionObserver(cardObserverMain.bind(this),{ //eslint-disable-line
+            rootMargin: "-30% 0px"
+        });
+
+        cardObserver.observe(flappyBirdEnclosure);
+        cardObserver.observe(quizAppEnclosure);
+        cardObserver.observe(TicTacToeEnclosure);
+        cardObserver.observe(BlogWebsiteEnclosure);
+    }
 }
 </script>
