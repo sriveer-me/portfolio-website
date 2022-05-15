@@ -1,5 +1,5 @@
 <template>
-    <n-tag>
+    <n-tag class="avatar-tag">
         {{name}}
         <template #avatar>
             <n-avatar :src="image" />

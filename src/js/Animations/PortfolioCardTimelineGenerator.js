@@ -12,19 +12,39 @@ export function genCardTimeline(domElement,fromLeft)
     //get the required elements to generate the timeline
     let projectCard = domElement.querySelector('.project-card');
     let leftGroup = projectCard.querySelectorAll('.left > *'); //eslint-disable-line
-    let projectDescription = projectCard.querySelectorAll('.right > *');
-    
-    //remove the last element icon-box from the animatable bunch
-    projectDescription = [...projectDescription];
-    projectDescription = projectDescription.map(function(el){
+    let avatarTags = [...projectCard.querySelectorAll('.avatar-tag')];
+    let rightGroup = projectCard.querySelectorAll('.right > *');
+    let projectDescriptionList = projectCard.querySelectorAll('.project-description-list > *');
+
+    leftGroup = [...leftGroup];
+    leftGroup = leftGroup.filter(function(el){
+        if(el.classList.contains('body-heading'))
+            return false;
+        
+        if(el.classList.contains('action-group'))
+            return false;
+        
+        if(el.classList.contains('tag-container'))
+            return false;
+
+        return true;
+    });
+    leftGroup = [...leftGroup];
+
+    rightGroup =[...rightGroup];
+    rightGroup= rightGroup.filter(function(el){
+        if(el.classList.contains('project-description-list'))
+            return false;
+        
         if(el.classList.contains('sticker-box'))
-        {
-            console.log('found the sticker-box');
-            return;
-        }
-        else return el;
+            return false;
+
+        return true;
     });
 
+    rightGroup = [...rightGroup, ...projectDescriptionList];
+
+    
     //assemble the timeline
     let tlm = new TimelineMax({paused: true}); //eslint-disable-line
 
@@ -33,12 +53,11 @@ export function genCardTimeline(domElement,fromLeft)
     {
         tlm.from(projectCard,1,{
             x: '-100%',
-            ease: Power4.EaeInOut //eslint-disable-line
+            ease: Power4.EaeInOut //eslint-disable-line 
         });
     }
     else
     {
-        console.log('hello');
         tlm.from(projectCard,1,{
             x: '100%',
             ease: Power4.EaeInOut //eslint-disable-line
@@ -46,15 +65,29 @@ export function genCardTimeline(domElement,fromLeft)
     }
     
     //step-2 light everything up one at a time
-    let allElements = [
-        ...leftGroup, ...projectDescription
-    ];
-
-    tlm.staggerFromTo(allElements,1,{
+    tlm.staggerFromTo(leftGroup,2,{
         opacity: 0
     },
     {
-        opacity: 1
+        opacity: 1,
+        ease: Power4.EaeInOut //eslint-disable-line
+
+    },1,"lightUpElements");
+
+    tlm.staggerFromTo(rightGroup,1,{
+        opacity: 0
+    },
+    {
+        opacity: 1,
+        ease: Power4.EaeInOut //eslint-disable-line
+    },0.25,"lightUpElements");
+
+    tlm.staggerFromTo(avatarTags,0.5,{
+        scale: 0
+    },
+    {
+        scale: 1,
+        ease: "elastic.out(1, 0.3)" //eslint-disable-line
     },0.25);
 
 
