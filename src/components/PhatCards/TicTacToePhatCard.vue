@@ -33,38 +33,40 @@
         ]"
     >
        <template #project-description-heading>
-           This fullstack web game uses both <a class="link" href="https://www.heroku.com/platform">Heroku</a> and <a class="link" href="https://www.netlify.com/">Netlify</a> together to provide blazing fast client load times as well as secure access to a transactional database.
+           This Desktop App which was designed to be run on Windows, Mac and Linux was written with the help of a few SVG's coupled with the powerful 2D renderer and Event System of the Godot Video Game Engine.
         </template>
 
         <template #project-description-list>
             <li>
                 <p class="bodyText">
-                    A <a class="link" href="https://en.wikipedia.org/wiki/Static_web_page">Static Page</a> is served to the client with exceptional speed using the <a href="https://azure.microsoft.com/en-in/overview/what-is-paas/" class="link">Platform As A Service (PAAS)</a> provider <a class="link" href="https://www.netlify.com/">Netlify</a>. 
+                    The <a class="link" href="https://www.javatpoint.com/mini-max-algorithm-in-ai">Mini-Max Algorithm</a> used to write the Artificial Intelligence, is ideally suited for a game such as Tic Tac Toe which can contain only 255168 possible combinations of the board at the start.
                 </p>
             </li>
             <li>
                 <p class="bodyText">
-                    This <a class="link" href="https://en.wikipedia.org/wiki/Static_web_page">Static Page</a> is invested with the responsibility to conduct and proctor the game. Client computation resources are utilized as much as possible so as to keep operation costs of the server low.
+                    The Player is allowed the first move in the game as this is the only way to reliably win the game against this <a class="link" href="https://en.wikipedia.org/wiki/Artificial_intelligence_in_video_games">Artificial Intelligence</a> which only makes the most optimal moves.
                 </p>
             </li>
             <li>
                 <p class="bodyText">
-                    The server hosted on the platform <a class="link" href="https://www.heroku.com/platform">Heroku</a> is responsible for storing and maintaining player records using a <a href="https://www.mongodb.com/databases/types/transactional-databases" class="link">Transactional Database</a> .
+                    Allowing the player to take the first move cuts down exponentially on the possibilities this game can play out in, allowing the algorithm to run much faster due to lesser computation required.
                 </p>
             </li>
             <li>
                 <p class="bodyText">
-                    The <a href="https://www.redhat.com/en/topics/api/what-is-a-rest-api" class="link">Rest Api</a> implemented by the server hosted on <a class="link" href="https://www.heroku.com/platform">Heroku</a> is used as an interface for the client to access player records while the game is in session in the browser.  
+                    The <a class="link" href="https://docs.godotengine.org/en/stable/tutorials/ui/index.html">UI Tooling in Godot</a> offers a platform independent way to design the front-end while also allowing the user to harness the power of a powerful video game engine.
                 </p>
             </li>
         </template>
 
         <template #sticker-box>
-            <NetlifyIcon />
+            <GodotIcon style="width: 64px; height: 64px;"/>
             <Icon size="64" color="#262525">
-                <BoardGames20Filled />
+                <ChessBoard />
             </Icon>
-            <HerokuIcon />
+            <Icon size="64" color="#262525">
+                <AccountTreeSharp />
+            </Icon>
         </template>
     </PhatProjectCard>
 </template>
@@ -83,19 +85,19 @@ import PhatProjectCard from '@/components/PhatProjectCard';
 
 import { Icon } from '@vicons/utils'
 
-import NetlifyIcon from '@/components/Icons/NetlifyIcon.vue'; 
-import BoardGames20Filled from '@/components/Icons/BoardGameIcon.vue';
-import HerokuIcon from '@/components/Icons/HerokuIcon.vue';
+import GodotIcon from '@/components/Icons/GodotIcon.vue'; 
+import ChessBoard from '@vicons/fa/ChessBoard';
+import AccountTreeSharp from '@vicons/material/AccountTreeSharp';
 
 export default {
-    name: "FlappyBirdPhatCard",
+    name: "TicTacToePhatCard",
     components:{
         PhatProjectCard,
 
         Icon,
-        NetlifyIcon,
-        BoardGames20Filled,
-        HerokuIcon
+        GodotIcon,
+        ChessBoard,
+        AccountTreeSharp
     }
 }
 </script>
