@@ -38,7 +38,6 @@ export default {
     name: 'App',
     components:{
         HomeSection,
-        //PortfolioSection,
         PortfolioSection,
         HireMeSection,
         ContactMeSection,
@@ -48,7 +47,6 @@ export default {
         SectionGap
     },
     mounted(){
-        console.log('app started');
         setTimeout(function(){
             generateAnimation();
         },0);

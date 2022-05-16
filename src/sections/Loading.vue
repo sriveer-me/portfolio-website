@@ -20,6 +20,11 @@ body{
 </style>
 
 <style lang="scss" scoped>
+
+.position-absolute{
+    position: absolute;
+}
+
 svg {
     stroke:none;
     fill: #DDD5D5;  

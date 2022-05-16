@@ -1,8 +1,7 @@
 <template>
-    <Transition leave-active-class="animate__animated animate__zoomOut" enter-active-class="animate__animated animate__fadeIn" >
+    <Transition leave-active-class="animate__animated animate__zoomOut position-absolute" enter-active-class="animate__animated animate__fadeIn" >
         <Suspense>
             <App />
-
             <template #fallback>
                 <LoadingScreen />
             </template>
