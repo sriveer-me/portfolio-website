@@ -31,6 +31,8 @@
             require('@/assets/images/ai-tic-tac-toe-5.png'),
             require('@/assets/images/ai-tic-tac-toe-6.png'),
         ]"
+        liveLink="https://github.com/veeru-neerukonda/Tic-Tac-Toe-Godot/releases/tag/1.0"
+        srcLink="https://github.com/veeru-neerukonda/Tic-Tac-Toe-Godot"
     >
        <template #project-description-heading>
            This Desktop App which was designed to be run on Windows, Mac and Linux was written with the help of a few SVG's coupled with the powerful 2D renderer and Event System of the Godot Video Game Engine.

@@ -53,6 +53,8 @@
             require('@/assets/images/flappy-bird-full-website-3.png'),
             require('@/assets/images/flappy-bird-full-website-4.png')
         ]"
+        liveLink="https://bird-flap-game.herokuapp.com/"
+        srcLink="https://github.com/veeru-neerukonda/flappy-bird"
     >
         <template #project-description-heading>
             This blockbuster game was rebuilt using <a class="link" href="https://www.w3schools.com/html/html5_canvas.asp">HTML Canvas Technology</a> and was subsequently deployed on <a class="link" href="https://www.heroku.com/platform">Heroku</a> so that it could once again be competed on and enjoyed by millions of players all over the world.

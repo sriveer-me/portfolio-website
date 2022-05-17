@@ -59,6 +59,8 @@
             require('@/assets/images/quiz-app-5.png'),
             require('@/assets/images/quiz-app-6.png'),
         ]"
+        liveLink="https://quiz-app-veeru.netlify.app/"
+        srcLink="https://github.com/veeru-neerukonda/quiz-app-game"
     >
         <template #project-description-heading>
            This fullstack web game uses both <a class="link" href="https://www.heroku.com/platform">Heroku</a> and <a class="link" href="https://www.netlify.com/">Netlify</a> together to provide blazing fast client load times as well as secure access to a transactional database.

@@ -57,6 +57,8 @@
             require('@/assets/images/project-blog-3.png'),
             require('@/assets/images/project-blog-4.png'),
         ]"
+        liveLink="https://vn-blog.netlify.app/"
+        srcLink="https://github.com/veeru-neerukonda/project-blog"
     >
         <template #project-description-heading>
             This fully responsive website written using <a class="link" href="https://v3.vuejs.org/">Vue3</a> packs a pretty punch with its impressive features like: 
