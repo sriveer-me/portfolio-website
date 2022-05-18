@@ -3,8 +3,12 @@
 
 *{
     --font-small: 16px;
+    --font-small-highlighted: 18px;
+
     --font-normal: 22px;
+
     --font-large: 18px;
+    --font-large-highlighted: 44px;
 
     --font-hero: 64px;
 
@@ -15,9 +19,13 @@
 @include for-tablet-portrait-up{
     *{
         --font-small: 16px;
+        --font-small-highlighted: 18px;
+
         --font-normal: 24px;
-        --font-large: 30px;
         
+        --font-large: 30px;
+        --font-large-highlighted: 46px;
+
         --font-hero: 144px;
 
         --font-hero-sub-spacing: 1.01em;
@@ -27,9 +35,13 @@
 @include for-desktop-up{
     *{
         --font-small: 18px;
+        --font-small-highlighted: 20px;
+
         --font-normal: 24px;
+
         --font-large: 32px;
-        
+        --font-large-highlighted: 48px;
+
         --font-hero: 144px;
 
         --font-hero-sub-spacing: 1.01em;
@@ -90,8 +102,8 @@
     font-style: normal;
     font-weight: 800;
     
-    font-size: var(--font-large);
-    line-height: calc(var(--font-large) * 1.15); 
+    font-size: var(--font-large-highlighted);
+    line-height: calc(var(--font-large-highlighted) * 1.15); 
     margin: var(--spacing-normal) 0;
 
     letter-spacing: 0.05em;
@@ -128,7 +140,7 @@
     font-family: Nunito;
     
     font-style: normal;
-    font-weight: 250;
+    font-weight: 300;
     &.strong{
         font-weight: 450;
     }
@@ -168,4 +180,8 @@
 
 .text-small{
     font-size: var(--font-small);
+}
+
+.text-small-highlighted{
+    font-size: var(--font-small-highlighted);
 }

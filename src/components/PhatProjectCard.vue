@@ -24,7 +24,7 @@
         </div>
         
         <div class="right">
-            <p class="strong text-center text-small">
+            <p class="strong text-center text-small-highlighted">
                 <slot name="project-description-heading" />
             </p>
 
@@ -71,6 +71,10 @@
     display: flex;
     flex-direction: column;
     row-gap: var(--spacing-normal);
+}
+
+h1.body-heading{
+    margin-bottom: var(--spacing-large);
 }
 
 .right{
