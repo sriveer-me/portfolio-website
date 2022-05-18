@@ -48,7 +48,7 @@
     display: grid;
     grid-template-columns: repeat(6,1fr);
     
-    row-gap: 125px;
+    row-gap: 75px;
 
     grid-template-areas: 
         "card-1 card-1 card-1 card-1 card-1 card-1"
