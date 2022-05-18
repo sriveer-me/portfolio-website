@@ -53,14 +53,14 @@ export function genCardTimeline(domElement,fromLeft)
     {
         tlm.from(projectCard,1,{
             x: '-100%',
-            ease: Power4.EaeInOut //eslint-disable-line 
+            ease: "expo.out"
         });
     }
     else
     {
         tlm.from(projectCard,1,{
             x: '100%',
-            ease: Power4.EaeInOut //eslint-disable-line
+            ease: "expo.out" 
         });
     }
     
@@ -70,7 +70,7 @@ export function genCardTimeline(domElement,fromLeft)
     },
     {
         opacity: 1,
-        ease: Power4.EaeInOut //eslint-disable-line
+        ease: "Power4.inOut"
 
     },1,"lightUpElements");
 
@@ -79,7 +79,7 @@ export function genCardTimeline(domElement,fromLeft)
     },
     {
         opacity: 1,
-        ease: Power4.EaeInOut //eslint-disable-line
+        ease: "Power4.inOut"
     },0.25,"lightUpElements");
 
     tlm.staggerFromTo(avatarTags,0.5,{
@@ -87,7 +87,7 @@ export function genCardTimeline(domElement,fromLeft)
     },
     {
         scale: 1,
-        ease: "elastic.out(1, 0.3)" //eslint-disable-line
+        ease: "elastic.out(1, 0.3)"
     },0.25,"lightUpElements");
 
 
