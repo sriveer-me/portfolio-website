@@ -21,7 +21,7 @@
                     </li>
                     <li>
                         <p class="bodyText align-center">
-                            I find the <strong>archietecture</strong> of video game engines quite fascinating and as such have dedicated to learn the intricacies and esoteric knowledge of atleast one video game game engine namely <strong>Godot.</strong>
+                            I find the <strong>archietecture</strong> of video game engines quite fascinating and as such have dedicated to learn the intricacies and operating knowledge of atleast one video game game engine namely <strong>Godot</strong>.
                         </p>
                     </li>
                 </ul>
@@ -42,17 +42,17 @@
                 <ul class="skill-description-list">
                     <li>
                         <p class="bodyText align-center">
-                            This very website was written entirely by me in the <strong>Vue3</strong> framework and is being hosted on a serverless backend cloud service.
+                            My day job for <AvatarTag :image="require('@/assets/images/hexagon-logo.jpg')" name="Hexagon" /> means working with a <strong>C#</strong> client based on <strong>.Net</strong> and <strong>WPF</strong> along with business logic written in <strong>C++</strong>.
                         </p>
                     </li>
                     <li>
                         <p class="bodyText align-center">
-                            Being very adept in the ways of the <strong>Rest Api</strong> means I can divide and conquer (or defeat in detail) any problem regarding a full stack application.      
+                            Being very adept in the ways of <strong>Rest Api</strong> means, I can divide and conquer (or defeat in detail) any problem regarding a full stack application.      
                         </p>
                     </li>
                     <li>
                         <p class="bodyText align-center">
-                            I take great pain to learn esoteric (slightly less useful) <strong>javascript</strong> as I plan on maintaining a diverse range of tools and solutions for any problem at hand.
+                            I take great pain to learn esoteric (slightly less frequently used) <strong>JavaScript</strong> as I plan on maintaining a diverse range of tools and solutions for any problem at hand.
                         </p>
                     </li>
                 </ul>
@@ -61,7 +61,7 @@
                         <LogoVue />
                     </Icon>
                     <Icon class="icon" :size="64">
-                        <Api />
+                        <Microsoft />
                     </Icon>
                     <Icon class="icon" :size="64">
                         <LogoJavascript />
@@ -78,7 +78,7 @@
                 <ul class="skill-description-list">
                     <li>
                         <p class="bodyText align-center">
-                            Preparing for the <strong>Amaozn Certified Cloud Practioner(CLF-C01)</strong> exam is broadening my understanding of the cloud and its role in the world. 
+                            Preparing for and passing my <strong>Amazon Certified Cloud Practioner(CLF-C01)</strong> exam has broadening my understanding of the cloud and its role in the world. <AvatarTag :image="require('@/assets/images/cloud-practitioner-logo.png')" name="Amazon Certified Cloud Practioner(CLF-C01)" gotoLink="https://www.certmetrics.com/amazon/public/download_e_cert.aspx?cert=78E85E9A8F2433FEE5D56AAD8CC82009OD4BF9E5DD8652F3C9FDF761B6BE4A9C8" :nameWrappable="true"/>
                         </p>
                     </li>
                     <li>
@@ -203,13 +203,14 @@ import GodotIcon from '@/components/Icons/GodotIcon.vue';
 import Android from '@vicons/ionicons4/LogoAndroid';
 
 import LogoJavascript  from '@vicons/ionicons5/LogoJavascript';
-import Api from '@vicons/carbon/Api';
+import Microsoft from '@vicons/fa/Microsoft';
 import LogoVue from '@vicons/ionicons5/LogoVue';
 
 import Cloud  from '@vicons/fa/Cloud';
 import Aws  from '@vicons/fa/Aws';
 import HerokuIcon from '@/components/Icons/HerokuIcon.vue';
 
+import AvatarTag from '@/components/AvatarTag.vue';
 
 import {isMobile, isTablet, isDesktop} from '@/js/breakpoints.js';
 
@@ -223,11 +224,13 @@ export default {
         Android,
         LogoJavascript,
         LogoVue,
-        Api,
+        Microsoft,
 
         Cloud,
         Aws,
-        HerokuIcon
+        HerokuIcon,
+
+        AvatarTag
     },
     data(){
         return{

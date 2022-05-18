@@ -1,4 +1,5 @@
 @use './color' as *;
+@use './spacing' as *;
 
 .cursor-pointer {
     cursor: pointer;
@@ -8,4 +9,22 @@
     text-decoration: none;
     color: map-get($accent,"light-mode");
     font-weight: 400;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.row-gap-small{
+    row-gap: var(--spacing-small);
+}
+
+.column-gap-small{
+    column-gap: var(--spacing-small);
 }
