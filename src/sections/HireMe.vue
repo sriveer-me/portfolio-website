@@ -47,7 +47,7 @@
                     </li>
                     <li>
                         <p class="bodyText align-center">
-                            Being very adept in the ways of Vue and <strong>Rest Api</strong> means, I can divide and conquer (or defeat in detail) any problem regarding a full stack application.      
+                            Being very adept in the ways of <strong>Vue3</strong> and <strong>Rest Api</strong> means, I can divide and conquer (or defeat in detail) any problem regarding a full stack application.      
                         </p>
                     </li>
                     <li>
